@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terapia Cognitivo-Conductual (TCC) | Heidy Cano</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- HEADER COMÚN -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- IZQUIERDA: LOGO -->
+      <div class="header-left">
+        <a href="index.html" class="brand" aria-label="Ir a inicio">
+          <img src="./assets/img/lg-sinnombre-grande.png" alt="Heydi Roncancio" />
+        </a>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">INICIO</a>
+          </li>
+
+          <!-- DROPDOWN TERAPIAS -->
+          <li class="nav-item dropdown" id="terapiasItem">
+            <button class="nav-link" id="btnTerapias" type="button" aria-expanded="false">
+              TERAPIAS
+            </button>
+
+            <div class="dropdown-menu" id="terapiasMenu" role="menu">
+              <a href="tcc.html" class="dropdown-link" role="menuitem">TCC — Terapia Cognitivo Conductual</a>
+              <a href="index.html" class="dropdown-link" role="menuitem">RTT® — Rapid Transformational Therapy</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" id="transformacionItem">
+  <button class="nav-link" id="btnTransformacion" type="button" aria-expanded="false">
+    TRANSFORMACIÓN
+  </button>
+
+  <div class="dropdown-menu" id="transformacionMenu" role="menu">
+    <a href="transform-hombre.html" class="dropdown-link" role="menuitem">RTT para Hombres</a>
+    <a href="transform-mujeres.html" class="dropdown-link" role="menuitem">RTT para Mujeres</a>
+  </div>
+</li>
+
+          <li class="nav-item">
+            <a href="testimonios.html" class="nav-link">HISTORIAS DE TRANSFORMACIÓN</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="sobre-mi.html" class="nav-link">SOBRE MÍ</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-link">CONTACTO</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- DERECHA: REDES -->
+      <div class="header-right">
+        <span class="social-label">Síguenos</span>
+        <div class="social-links">
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/+573227054582" class="social-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <!-- HERO / INTRO TCC -->
+  <section class="section-alt">
+    <div class="container two-cols">
+      <div>
+        <h1>Terapia Cognitivo-Conductual (TCC)</h1>
+        <p>
+          Si deseas conocerte más, fortalecer tu inteligencia emocional o trabajar un tema específico con un proceso estructurado y paso a paso, la Terapia Cognitivo-Conductual (TCC) es ideal para ti.
+        </p>
+        <p>
+          Además, puedes complementar tus sesiones de RTT® con TCC para potenciar tus avances y obtener resultados más profundos y duraderos.
+        </p>
+      </div>
+      <div>
+        <!-- Puedes cambiar esta imagen cuando quieras -->
+        <div class="hero-side">
+          <img src="assets/img/inicio-rtt2.png" alt="Persona en proceso terapéutico" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿QUÉ ES LA TCC? -->
+  <section class="section">
+    <div class="container two-cols">
+      <div>
+        <h2>¿Qué es la Terapia Cognitivo-Conductual (TCC)?</h2>
+        <p>
+          La Terapia Cognitivo-Conductual es un enfoque psicológico basado en evidencia científica que se centra en la relación entre pensamientos, emociones y conductas. Parte de la idea de que no son los eventos en sí los que generan malestar, sino la interpretación que hacemos de ellos.
+        </p>
+        <p>
+          La TCC ayuda a identificar esos patrones de pensamiento automáticos y a reemplazarlos por interpretaciones más realistas y saludables, promoviendo cambios emocionales y conductuales duraderos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿CÓMO FUNCIONA? -->
+  <section class="section">
+    <div class="container two-cols">
+      <div>
+        <h2>¿Cómo funciona?</h2>
+        <p>
+          La TCC funciona mediante técnicas estructuradas y prácticas que se aplican dentro y fuera de sesión.
+        </p>
+        <p>Incluye:</p>
+        <ul class="bullets">
+          <li>Identificación de pensamientos disfuncionales (distorsiones cognitivas).</li>
+          <li>Reestructuración cognitiva para modificar creencias que generan malestar.</li>
+          <li>Exposición gradual a situaciones evitadas (cuando aplica).</li>
+          <li>Entrenamiento en habilidades como resolución de problemas, regulación emocional o manejo del estrés.</li>
+          <li>Tareas entre sesiones para consolidar avances.</li>
+        </ul>
+        <p>
+          Es un proceso activo, colaborativo y orientado a objetivos, donde terapeuta y consultante trabajan juntos para generar cambios medibles y sostenibles.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿DA RESULTADOS? -->
+  <section class="section">
+    <div class="container two-cols">
+      <div>
+        <h2>¿Da resultados?</h2>
+        <p>
+          Sí. La TCC es uno de los enfoques terapéuticos con mayor respaldo científico a nivel mundial.
+        </p>
+        <p>
+          Numerosos estudios han demostrado su eficacia en el tratamiento de:
+          ansiedad y pánico, depresión, estrés crónico, fobias, autoestima,
+          duelos, trastornos de hábitos (alimentación, sueño, rutinas),
+          perfeccionismo, culpa, bloqueo mental y más.
+        </p>
+        <p>
+          Su efectividad se debe a que trabaja tanto el origen de los pensamientos como las conductas que los mantienen, generando cambios concretos y observables.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿CUÁNTAS SESIONES NECESITO? -->
+  <section class="section">
+    <div class="container two-cols">
+      <div>
+        <h2>¿Cuántas sesiones necesito?</h2>
+        <p>
+          El número de sesiones depende del tema a trabajar y del ritmo de cada persona, pero la TCC es conocida por ser una terapia breve y focalizada.
+        </p>
+        <p>En promedio:</p>
+        <ul class="bullets">
+          <li>Procesos puntuales pueden requerir entre 8 y 12 sesiones.</li>
+          <li>Temas más profundos o de larga duración pueden necesitar entre 12 y 20 sesiones.</li>
+          <li>Casos complejos pueden extenderse según la evolución, siempre con objetivos claros y revisiones periódicas del progreso.</li>
+        </ul>
+        <p>
+          El foco está en avanzar a un ritmo seguro, efectivo y medible, garantizando que cada persona se lleve herramientas aplicables para su vida diaria.
+        </p>
+      </div>
+    </div>
+  </section>
+   <!-- FOOTER COMÚN -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- LOGO COMPUESTO -->
+      <div class="footer-logo-group">
+
+         <img src="./assets/img/logo-blanco.png">
+         <img src="./assets/img/logortt.png">
+         <img src="./assets/img/logo IHA.png">
+        
+      </div>
+      
+
+      <!-- LEGAL -->
+      <div class="footer-legal">
+        <p class="legal-text">
+          La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
+        </p>
+
+        <div class="legal-links">
+          <a href="#">Política de privacidad</a>
+          <span>•</span>
+          <a href="#">Aviso legal</a>
+        </div>
+
+        <p class="copyright">
+          © 2025 Hipnosis para transformar. Todos los derechos reservados.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí | Heidy Cano</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- HEADER COMÚN -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- IZQUIERDA: LOGO -->
+      <div class="header-left">
+        <a href="index.html" class="brand" aria-label="Ir a inicio">
+          <img src="./assets/img/lg-sinnombre-grande.png" alt="Heydi Roncancio" />
+        </a>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">INICIO</a>
+          </li>
+
+          <!-- DROPDOWN TERAPIAS -->
+          <li class="nav-item dropdown" id="terapiasItem">
+            <button class="nav-link" id="btnTerapias" type="button" aria-expanded="false">
+              TERAPIAS
+            </button>
+
+            <div class="dropdown-menu" id="terapiasMenu" role="menu">
+              <a href="tcc.html" class="dropdown-link" role="menuitem">TCC — Terapia Cognitivo Conductual</a>
+              <a href="index.html" class="dropdown-link" role="menuitem">RTT® — Rapid Transformational Therapy</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown" id="transformacionItem">
+  <button class="nav-link" id="btnTransformacion" type="button" aria-expanded="false">
+    TRANSFORMACIÓN
+  </button>
+
+  <div class="dropdown-menu" id="transformacionMenu" role="menu">
+    <a href="transform-hombre.html" class="dropdown-link" role="menuitem">RTT para Hombres</a>
+    <a href="transform-mujeres.html" class="dropdown-link" role="menuitem">RTT para Mujeres</a>
+  </div>
+</li>
+
+          <li class="nav-item">
+            <a href="testimonios.html" class="nav-link">HISTORIAS DE TRANSFORMACIÓN</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="sobre-mi.html" class="nav-link">SOBRE MÍ</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contacto.html" class="nav-link">CONTACTO</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- DERECHA: REDES -->
+      <div class="header-right">
+        <span class="social-label">Síguenos</span>
+        <div class="social-links">
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/+573227054582" class="social-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- SOBRE MÍ -->
+  <section class="section-alt about-hero">
+    <div class="container two-cols">
+      <div class="about-text">
+        <h1>Sobre mí</h1>
+        <p>
+          Hola, soy Heydi Roncancio C., Soy terapeuta certificada en RTT®, miembro de la
+          IHA (International Hypnosis Association) y psicóloga con énfasis en Terapia
+          Cognitivo-Conductual y PNL. Acompaño a personas que desean sanar, liberar
+          bloqueos, mejorar su salud mental, emocional, y transformar su vida desde la raíz.
+          Con RTT® y métodos respaldados profesionalmente, hago que la salud mental sea
+          accesible, asequible, rápida y efectiva. A través de un enfoque seguro, humano y
+          respetuoso.
+          Tu cambio puede estar a solo un clic de distancia.
+        </p>
+
+
+
+      
+      </div>
+      <div class="about-photo">
+        <!-- Reemplaza por tu foto real -->
+        <div class="about-photo-placeholder">
+          <span>Tu foto aquí</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE EXTRA -->
+
+  <section class="section-alt vision-mision">
+    <div class="container vision-mision-strip">
+      <!-- Mi visión -->
+      <article class="vm-item">
+        <div class="vm-icon">
+          <!-- Usa aquí la mariposa pequeña del logo -->
+          <img src="assets/img/icono-mariposa.png" alt="Mariposa del logo" />
+        </div>
+        <div class="vm-text">
+          <h3>Mi visión</h3>
+          <p>
+            Que la salud mental sea accesible y asequible para todas las personas,
+            reconociéndola como un derecho fundamental.
+          </p>
+        </div>
+      </article>
+  
+      <!-- Mi misión -->
+      <article class="vm-item">
+        <div class="vm-icon">
+          <!-- Aquí un faro de luz o camino iluminado -->
+          <img src="assets/img/icono-faro.png" alt="Faro de luz" />
+        </div>
+        <div class="vm-text">
+          <h3>Mi misión</h3>
+          <p>
+            Acompañar a quienes desean mejorar su bienestar mental, emocional y físico,
+            guiándolos con un método seguro, eficaz y orientado a alcanzar los objetivos que
+            se proponen.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <br>
+  <section class="section-alt" id="lo-que-dicen">
+    <div class="container">
+      <h2>Lo que dicen quienes han trabajado conmigo</h2>
+      <p class="loque-intro">
+        Voces reales que comparten cómo se sintieron acompañados, escuchados y
+        apoyados en su proceso terapéutico. Pequeños reflejos del impacto humano y
+        transformador que puede tener un espacio seguro para sanar.
+      </p>
+  
+      <div class="loque-grid">
+        <!-- Testimonio 1 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Heydi es una profesional excepcional. Su empatía y ética se sienten desde el
+            primer instante; te hace sentir escuchado, apoyado y nunca juzgado. Transformó
+            por completo la visión negativa que tenía sobre la terapia. Para mi sorpresa,
+            terminé disfrutando el proceso y encontrando en él un espacio seguro y valioso.
+          </p>
+          <p class="loque-name">— Joan C.</p>
+        </article>
+  
+        <!-- Testimonio 2 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Mi proceso con Heydi ha sido transformador. Desde el inicio se nota su calidad
+            humana, lo que permite abrirse con confianza y trabajar esas partes vulnerables
+            que uno suele ocultar, pero que necesitan sanar. Los cambios han sido evidentes
+            y me he sentido acompañado en cada paso.
+          </p>
+          <p class="loque-name">— Pablo B.</p>
+        </article>
+  
+        <!-- Testimonio 3 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Llegué a terapia por ansiedad y depresión. Como hombre, siempre me costó
+            abrirme emocionalmente, pero Heydi creó un ambiente de confianza que me
+            permitió hablar de mi situación sin miedo y comenzar a sanar. En el proceso
+            también aprendí a conocerme mejor.
+          </p>
+          <p class="loque-text">
+            Hoy mi vida es mucho más tranquila y feliz. Sané y recuperé una calidad de vida
+            que antes veía imposible. Estoy profundamente agradecido por el
+            acompañamiento recibido.
+          </p>
+          <p class="loque-name">— Juan M.</p>
+        </article>
+  
+        <!-- Testimonio 4 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Estoy muy agradecida con Heydi por su trato profesional y su calidez humana. El
+            seguimiento que hace durante el proceso te hace sentir valorado, visible e
+            importante. Soy una persona mayor y, gracias a su paciencia y comprensión, pude
+            sentirme escuchada sin juicio por primera vez en mucho tiempo. Mejoré, recuperé
+            tranquilidad y volví a disfrutar de mi vida.
+          </p>
+          <p class="loque-name">— Rosa D.</p>
+        </article>
+  
+        <!-- Testimonio 5 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            En consulta con Heydi me sentí contenida, escuchada y sorprendida con el
+            cambio desde la primera sesión. El proceso fue profundo, profesional y muy
+            humano.
+          </p>
+          <p class="loque-name">— María D.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- FOOTER COMÚN -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- LOGO COMPUESTO -->
+      <div class="footer-logo-group">
+
+         <img src="./assets/img/logo-blanco.png">
+         <img src="./assets/img/logortt.png">
+         <img src="./assets/img/logo IHA.png">
+        
+      </div>
+      
+
+      <!-- LEGAL -->
+      <div class="footer-legal">
+        <p class="legal-text">
+          La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
+        </p>
+
+        <div class="legal-links">
+          <a href="#">Política de privacidad</a>
+          <span>•</span>
+          <a href="#">Aviso legal</a>
+        </div>
+
+        <p class="copyright">
+          © 2025 Hipnosis para transformar. Todos los derechos reservados.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>
