@@ -3,80 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testimonios | Heidy Cano</title>
+  <title>Historias de transformación | Heidy Cano</title>
 
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  
    <!-- HEADER COMÚN -->
   <header class="site-header">
     <div class="container header-inner">
+
+      <!-- IZQUIERDA: LOGO -->
       <div class="header-left">
-        <img src="./assets/img/logo-blanco.png"/>
+        <a href="index.html" class="brand" aria-label="Ir a inicio">
+          <img src="./assets/img/lg-sinnombre-grande.png" alt="Heydi Roncancio" />
+        </a>
       </div>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
         <ul>
-          <li class="nav-item dropdown">
-            <button class="nav-link">Terapias</button>
-            <div class="dropdown-menu">
-              <a href="index.html" class="dropdown-link">Terapia RTT®</a>
-              <a href="tcc.html" class="dropdown-link">Terapia Cognitiva Conductual (TCC)</a>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">INICIO</a>
+          </li>
+
+          <!-- DROPDOWN TERAPIAS -->
+          <li class="nav-item dropdown" id="terapiasItem">
+            <button class="nav-link" id="btnTerapias" type="button" aria-expanded="false">
+              TERAPIAS
+            </button>
+
+            <div class="dropdown-menu" id="terapiasMenu" role="menu">
+              <a href="tcc.html" class="dropdown-link" role="menuitem">TCC — Terapia Cognitivo Conductual</a>
+              <a href="index.html" class="dropdown-link" role="menuitem">RTT® — Rapid Transformational Therapy</a>
             </div>
           </li>
+
+          <li class="nav-item dropdown" id="transformacionItem">
+  <button class="nav-link" id="btnTransformacion" type="button" aria-expanded="false">
+    TRANSFORMACIÓN
+  </button>
+
+  <div class="dropdown-menu" id="transformacionMenu" role="menu">
+    <a href="transform-hombre.html" class="dropdown-link" role="menuitem">RTT para Hombres</a>
+    <a href="transform-mujeres.html" class="dropdown-link" role="menuitem">RTT para Mujeres</a>
+  </div>
+</li>
+
           <li class="nav-item">
-            <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+            <a href="testimonios.html" class="nav-link">HISTORIAS DE TRANSFORMACIÓN</a>
           </li>
+
           <li class="nav-item">
-            <a href="testimonios.html" class="nav-link">Testimonios</a>
+            <a href="sobre-mi.html" class="nav-link">SOBRE MÍ</a>
           </li>
+
           <li class="nav-item">
-            <a href="descuentos.html" class="nav-link">Descuentos</a>
-          </li>
-          <li class="nav-item">
-            <a href="contacto.html" class="nav-link">Contacto</a>
+            <a href="contacto.html" class="nav-link">CONTACTO</a>
           </li>
         </ul>
       </nav>
 
+      <!-- DERECHA: REDES -->
       <div class="header-right">
         <span class="social-label">Síguenos</span>
         <div class="social-links">
-          <a href="#" class="social-pill" aria-label="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="social-pill" aria-label="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="social-pill" aria-label="WhatsApp">
-            <i class="bi bi-whatsapp"></i>
-          </a>
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/+573227054582" class="social-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
+
     </div>
   </header>
-
-  <!-- LISTA DE TESTIMONIOS -->
-  <section class="section">
+  <!-- CONTENIDO: HISTORIAS DE TRANSFORMACIÓN -->
+  <section class="section" id="historias-transformacion">
     <div class="container">
-      <h1>Testimonios</h1>
+      <h1>Historias de transformación</h1>
+      <p>
+        Aquí encontrarás experiencias reales de personas que, con valentía, eligieron
+        iniciar un proceso de transformación. Cada una de estas historias refleja lo que es
+        posible cuando hay un espacio seguro para sanar; empatía, confianza y un
+        acompañamiento terapéutico que honra la historia de cada individuo.
+        Que estas voces te inspiren a dar tu propio paso hacia el bienestar.
+      </p>
+
+      <!-- GRID DE TESTIMONIOS -->
       <div class="testimonials-grid">
         <!-- Testimonio 1 -->
         <article class="testimonial-card">
           <div class="testimonial-quote-icon">
             <i class="bi bi-quote"></i>
           </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
           <p class="testimonial-text">
-            “Llegué con una ansiedad que me acompañaba desde hacía años. Después de la sesión de RTT® y escuchar mi audio,
-            empecé a sentir una calma que no recordaba. Hoy puedo dormir mejor, poner límites y disfrutar cosas simples
-            que antes me generaban preocupación constante.”
+            Viví con ansiedad, depresión y baja autoestima desde muy niña. Intenté quitarme
+            la vida varias veces, no tenía propósito ni alegría; nada me llenaba. Gracias a
+            RTT® + TCC logré cambiar mi auto concepto, tomar control de mis emociones y
+            liberarme de la depresión y la ansiedad. Hoy tengo una vida nueva y un proyecto
+            que me hace completamente feliz.
           </p>
-          <p class="testimonial-name">Carolina M.</p>
-          <p class="testimonial-tag">Ansiedad generalizada · Sesiones online</p>
+          <p class="testimonial-name">Diana, 40 años — Pereira, Colombia.</p>
+          <p class="testimonial-tag">RTT® + TCC (Ansiedad, depresión, baja autoestima)</p>
         </article>
 
         <!-- Testimonio 2 -->
@@ -84,13 +128,16 @@
           <div class="testimonial-quote-icon">
             <i class="bi bi-quote"></i>
           </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
           <p class="testimonial-text">
-            “Con TCC entendí muchos pensamientos automáticos que tenía sobre mí y sobre los demás. Poder cuestionarlos y
-            reemplazarlos por ideas más realistas cambió mi forma de relacionarme. Me siento más segura, menos culpable
-            y con herramientas claras para el día a día.”
+            Sufrí un dolor emocional tan fuerte que me paralizaba, producto de una ruptura
+            amorosa donde recibí maltrato. Un amigo me sugirió RTT®; no la conocía, pero la
+            tomé. Sané un apego ansioso que no sabía que tenía y que era la causa de mi
+            sufrimiento. Hoy soy feliz, me valoro, disfruto la vida y siento una paz que nunca
+            antes había experimentado.
           </p>
-          <p class="testimonial-name">Laura G.</p>
-          <p class="testimonial-tag">Autoestima y culpa · Proceso con TCC</p>
+          <p class="testimonial-name">Silvio M., 29 años — Ibagué, Colombia.</p>
+          <p class="testimonial-tag">RTT® (Apego ansioso)</p>
         </article>
 
         <!-- Testimonio 3 -->
@@ -98,13 +145,15 @@
           <div class="testimonial-quote-icon">
             <i class="bi bi-quote"></i>
           </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
           <p class="testimonial-text">
-            “Tenía miedo a hablar en público y eso me frenaba en el trabajo. Con la combinación de RTT® y ejercicios de TCC
-            pude llegar a la raíz de ese miedo y entrenar nuevas formas de pensar. Hace poco di mi primera presentación
-            frente a todo el equipo y la disfruté.”
+            Me paralizaba hablar en público, algo que en el mundo corporativo te estanca.
+            Tomé una sesión de RTT® y encontramos la raíz del problema. Lo trabajamos en
+            consulta, mi confianza aumentó y el miedo desapareció. Ahora presento mis
+            proyectos con seguridad y mi desempeño profesional mejoró notablemente.
           </p>
-          <p class="testimonial-name">Andrés R.</p>
-          <p class="testimonial-tag">Miedo a hablar en público · RTT® + TCC</p>
+          <p class="testimonial-name">Pablo M., 38 años — CDMX.</p>
+          <p class="testimonial-tag">RTT® (Miedo a hablar en público)</p>
         </article>
 
         <!-- Testimonio 4 -->
@@ -112,13 +161,14 @@
           <div class="testimonial-quote-icon">
             <i class="bi bi-quote"></i>
           </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
           <p class="testimonial-text">
-            “Estaba en un momento de mucho cansancio emocional y bloqueo. Sentía que repetía los mismos patrones en mis
-            relaciones. El proceso terapéutico me ayudó a comprender de dónde venían esos patrones y a tomar decisiones
-            más conscientes y amorosas conmigo.”
+            Sufría migrañas continuas y muy fuertes. Me sugirieron RTT® para encontrar la
+            raíz emocional del dolor. En la sesión descubrí que venía desde mi infancia. Logré
+            sanar, mis emociones están equilibradas y el dolor desapareció.
           </p>
-          <p class="testimonial-name">Mariana P.</p>
-          <p class="testimonial-tag">Bloqueo emocional · Proceso terapéutico</p>
+          <p class="testimonial-name">Diana C., 42 años — Venecia, Antioquia, Colombia.</p>
+          <p class="testimonial-tag">RTT® (Migraña)</p>
         </article>
 
         <!-- Testimonio 5 -->
@@ -126,13 +176,18 @@
           <div class="testimonial-quote-icon">
             <i class="bi bi-quote"></i>
           </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
           <p class="testimonial-text">
-            “Siempre posponía todo y me sentía frustrado conmigo mismo. Con la TCC aprendí a organizar mis metas en pasos
-            pequeños y a cambiar la forma en que me hablaba internamente. Hoy soy mucho más constante y, sobre todo, más
-            compasivo conmigo.”
+            Comencé a sufrir disfonía; cada día mi voz se apagaba más y hablar se volvió
+            doloroso. Los especialistas no encontraban causa física. Me hablaron de RTT® y
+            realicé la sesión para explorar un posible origen emocional. Así fue. Años callando
+            mis emociones fueron apagando mi voz. Necesité dos sesiones y poco a poco
+            recuperé mi tono y claridad. Practico el canto, así que volver a cantar fue
+            profundamente emocionante. Sanar con RTT® me devolvió la voz y estoy muy
+            agradecida.
           </p>
-          <p class="testimonial-name">Felipe S.</p>
-          <p class="testimonial-tag">Procrastinación y autocrítica · TCC</p>
+          <p class="testimonial-name">Yeimi C., 43 años — Líbano, Tolima, Colombia.</p>
+          <p class="testimonial-tag">RTT® (Pérdida de la voz)</p>
         </article>
 
         <!-- Testimonio 6 -->
@@ -140,35 +195,120 @@
           <div class="testimonial-quote-icon">
             <i class="bi bi-quote"></i>
           </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
           <p class="testimonial-text">
-            “Había intentado varias cosas para manejar el estrés, pero nada se sostenía. Con RTT® pude entender por qué me
-            exigía tanto y soltar muchas creencias que ya no necesitaba. Ahora tengo más espacio para mí y logro equilibrar
-            mejor mi vida personal y laboral.”
+            Padecí ansiedad mucho tiempo. Estaba medicada, pero no mejoraba; tenía
+            ataques de pánico, no dormía ni comía, y mi vida se estancó. Con RTT® y TCC
+            mi vida cambió. Me liberé de la ansiedad, ahora duermo tranquila, mi alimentación
+            se normalizó y retomé una vida activa. Solo quienes hemos vivido con ansiedad
+            sabemos lo que es sentir miedo constante. Hoy disfruto una vida en paz.
           </p>
-          <p class="testimonial-name">Julián V.</p>
-          <p class="testimonial-tag">Estrés y autoexigencia · RTT®</p>
+          <p class="testimonial-name">Maribel H., 63 años — Bogotá, Colombia.</p>
+          <p class="testimonial-tag">RTT® (Ansiedad)</p>
         </article>
+
+        <!-- Testimonio 7 -->
+        <article class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <i class="bi bi-quote"></i>
+          </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            Sufría ansiedad y depresión. Viví abuso en mi infancia y me costaba hablar de
+            ello. Como hombres, muchas veces callamos todo por “ser fuertes”, hasta que no
+            pudimos más. Mi ansiedad y depresión me llevaron a querer morir. Me hablaron
+            de RTT® y decidí intentarlo. Pude sanar, liberarme emocionalmente, retomé mis
+            estudios, inicié un proyecto personal y hoy tengo paz.
+          </p>
+          <p class="testimonial-name">Juan L., 36 años — Pereira, Risaralda, Colombia.</p>
+          <p class="testimonial-tag">RTT® (Ansiedad, depresión)</p>
+        </article>
+
+        <!-- Testimonio 8 -->
+        <article class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <i class="bi bi-quote"></i>
+          </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            Tenía dificultad para aprobar un examen y graduarme como profesional. La
+            presión me llevaba al auto sabotaje: estudiaba, me preparaba, pero al final el
+            estrés me bloqueaba, perdía memoria y concentración. Tomé RTT® y mi memoria,
+            confianza y manejo del estrés mejoraron. Presenté nuevamente el examen y lo
+            pasé. Me gradué, actualmente estoy ejerciendo mi profesión. Estoy muy feliz y
+            agradecida.
+          </p>
+          <p class="testimonial-name">Michelle C., 30 años — Bogotá, Colombia.</p>
+          <p class="testimonial-tag">RTT® (Concentración, enfoque y memoria)</p>
+        </article>
+
+        <!-- Testimonio 9 -->
+        <article class="testimonial-card">
+          <div class="testimonial-quote-icon">
+            <i class="bi bi-quote"></i>
+          </div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">
+            Llegué a Heydi con un trastorno alimentario que estaba afectando profundamente
+            mi salud física y emocional. Después de una sesión de RTT® con ella, pude
+            sanar, recuperar mi bienestar y reencontrarme con mi alegría y mi confianza.
+            Había probado otros procesos psicológicos sin lograr avances reales, pero con
+            RTT® encontré una transformación rápida, profunda y efectiva.
+          </p>
+          <p class="testimonial-text">
+            Heydi es una profesional excepcional: comprensiva, respetuosa y cálida. Te
+            acompaña sin juzgar y te hace sentir segura en todo momento. Su apoyo fue
+            invaluable. Gracias de corazón, Heydi.
+          </p>
+          <p class="testimonial-name">María, 45 años — Madrid, España.</p>
+          <p class="testimonial-tag">
+            RTT® (Bulimia — Recuperación emocional y conductual)
+          </p>
+        </article>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="contacto.html" class="btn-primary">Iniciar mi transformación</a>
       </div>
     </div>
   </section>
-
+ <!-- FOOTER COMÚN -->
   <!-- FOOTER COMÚN -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-top">
-        <img src="./assets/img/logo-blanco.png"/>
-        <div class="footer-social">
-          <a href="#" class="footer-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="footer-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="footer-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        </div>
+
+      <!-- LOGO COMPUESTO -->
+      <div class="footer-logo-group">
+
+         <img src="./assets/img/logo-blanco.png">
+         <img src="./assets/img/logortt.png">
+         <img src="./assets/img/logo IHA.png">
+        
       </div>
-      <p class="legal-text">
-        La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
-      </p>
+      
+
+      <!-- LEGAL -->
+      <div class="footer-legal">
+        <p class="legal-text">
+          La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
+        </p>
+
+        <div class="legal-links">
+          <a href="#">Política de privacidad</a>
+          <span>•</span>
+          <a href="#">Aviso legal</a>
+        </div>
+
+        <p class="copyright">
+          © 2025 Hipnosis para transformar. Todos los derechos reservados.
+        </p>
+      </div>
+
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="assets/js/menu.js"></script>
 </body>
 </html>

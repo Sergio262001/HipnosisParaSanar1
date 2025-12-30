@@ -12,51 +12,78 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-   <!-- HEADER COMÚN -->
+  <!-- HEADER COMÚN -->
   <header class="site-header">
     <div class="container header-inner">
+
+      <!-- IZQUIERDA: LOGO -->
       <div class="header-left">
-        <img src="./assets/img/logo-blanco.png"/>
+        <a href="index.html" class="brand" aria-label="Ir a inicio">
+          <img src="./assets/img/lg-sinnombre-grande.png" alt="Heydi Roncancio" />
+        </a>
       </div>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
         <ul>
-          <li class="nav-item dropdown">
-            <button class="nav-link">Terapias</button>
-            <div class="dropdown-menu">
-              <a href="index.html" class="dropdown-link active">Terapia RTT®</a>
-              <a href="tcc.html" class="dropdown-link">Terapia Cognitiva Conductual (TCC)</a>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">INICIO</a>
+          </li>
+
+          <!-- DROPDOWN TERAPIAS -->
+          <li class="nav-item dropdown" id="terapiasItem">
+            <button class="nav-link" id="btnTerapias" type="button" aria-expanded="false">
+              TERAPIAS
+            </button>
+
+            <div class="dropdown-menu" id="terapiasMenu" role="menu">
+              <a href="tcc.html" class="dropdown-link" role="menuitem">TCC — Terapia Cognitivo Conductual</a>
+              <a href="index.html" class="dropdown-link" role="menuitem">RTT® — Rapid Transformational Therapy</a>
             </div>
           </li>
+
+          <li class="nav-item dropdown" id="transformacionItem">
+  <button class="nav-link" id="btnTransformacion" type="button" aria-expanded="false">
+    TRANSFORMACIÓN
+  </button>
+
+  <div class="dropdown-menu" id="transformacionMenu" role="menu">
+    <a href="transform-hombre.html" class="dropdown-link" role="menuitem">RTT para Hombres</a>
+    <a href="transform-mujeres.html" class="dropdown-link" role="menuitem">RTT para Mujeres</a>
+  </div>
+</li>
+
           <li class="nav-item">
-            <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+            <a href="testimonios.html" class="nav-link">HISTORIAS DE TRANSFORMACIÓN</a>
           </li>
+
           <li class="nav-item">
-            <a href="testimonios.html" class="nav-link">Testimonios</a>
+            <a href="sobre-mi.html" class="nav-link">SOBRE MÍ</a>
           </li>
+
           <li class="nav-item">
-            <a href="descuentos.html" class="nav-link">Descuentos</a>
-          </li>
-          <li class="nav-item">
-            <a href="contacto.html" class="nav-link">Contacto</a>
+            <a href="contacto.html" class="nav-link">CONTACTO</a>
           </li>
         </ul>
       </nav>
 
+      <!-- DERECHA: REDES -->
       <div class="header-right">
         <span class="social-label">Síguenos</span>
         <div class="social-links">
-          <a href="#" class="social-pill" aria-label="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="social-pill" aria-label="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="social-pill" aria-label="WhatsApp">
-            <i class="bi bi-whatsapp"></i>
-          </a>
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/+573227054582" class="social-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -66,27 +93,14 @@
       <div class="about-text">
         <h1>Sobre mí</h1>
         <p>
-        Hola, soy Heydi Roncancio. C. Soy terapeuta certificada en RTT® y miembro de la Asociación Internacional de Hipnoterapeutas.
-Soy psicóloga con énfasis clínico en Terapia Cognitivo-Conductual y Programación Neurolingüística (PNL), con varios años de experiencia acompañando procesos de bienestar integral.
-        </p>
-        <p>
-          Soy psicóloga con énfasis clínico en Terapia Cognitivo-Conductual y Programación Neurolingüística (PNL), con varios años de experiencia acompañando procesos de bienestar integral.
-        </p>
-          <p>
-         Mi misión es guiar a las personas que desean mejorar su salud mental, emocional e incluso física. Acompaño tanto a quienes sienten que han perdido la esperanza y creen que no existe una salida, como a quienes simplemente desean transformar algún aspecto de su vida.
-        </p>
-         <p>
-        A través de RTT® busco hacer que la salud mental sea accesible y asequible para todos. Creo profundamente que es un derecho fundamental y que, gracias a los avances científicos, hoy contamos con métodos rápidos, efectivos y con respaldo profesional que pueden marcar una diferencia real.
-        </p>
-         <p>
-       He trabajado con consultantes en situaciones complejas, personas que creían no tener alternativas. Ser testigo de cómo sus vidas se transforman de manera positiva ha sido uno de los mayores privilegios de mi labor. Esto me confirma que sí es posible sanar, mejorar y cambiar cuando se encuentra el método adecuado.
-        </p>
-        <p>
-       Si estás buscando un cambio, estás en el lugar correcto.
-RTT® es una de las terapias más reconocidas a nivel mundial por su eficacia y resultados comprobados.
-        </p>
-         <p>
-      A veces la mejora que buscamos está a solo un clic de distancia. La decisión está en tus manos.
+          Hola, soy Heydi Roncancio C., Soy terapeuta certificada en RTT®, miembro de la
+          IHA (International Hypnosis Association) y psicóloga con énfasis en Terapia
+          Cognitivo-Conductual y PNL. Acompaño a personas que desean sanar, liberar
+          bloqueos, mejorar su salud mental, emocional, y transformar su vida desde la raíz.
+          Con RTT® y métodos respaldados profesionalmente, hago que la salud mental sea
+          accesible, asequible, rápida y efectiva. A través de un enfoque seguro, humano y
+          respetuoso.
+          Tu cambio puede estar a solo un clic de distancia.
         </p>
 
 
@@ -103,50 +117,151 @@ RTT® es una de las terapias más reconocidas a nivel mundial por su eficacia y 
   </section>
 
   <!-- BLOQUE EXTRA -->
-  <!-- <section class="section">
-    <div class="container">
-      <h2>Formación y enfoque</h2>
-      <p class="section-intro">
-        Usa este espacio para listar tus formaciones principales, certificaciones
-        y líneas terapéuticas con las que trabajas.
-      </p>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>Formación en RTT®</h3>
-          <p>Aquí puedes detallar tu formación específica en RTT® y acreditaciones.</p>
+  <section class="section-alt vision-mision">
+    <div class="container vision-mision-strip">
+      <!-- Mi visión -->
+      <article class="vm-item">
+        <div class="vm-icon">
+          <!-- Usa aquí la mariposa pequeña del logo -->
+          <img src="assets/img/icono-mariposa.png" alt="Mariposa del logo" />
         </div>
-        <div class="card">
-          <h3>Otras terapias</h3>
-          <p>Añade tus estudios en TCC, psicoterapia, coaching u otras herramientas.</p>
+        <div class="vm-text">
+          <h3>Mi visión</h3>
+          <p>
+            Que la salud mental sea accesible y asequible para todas las personas,
+            reconociéndola como un derecho fundamental.
+          </p>
         </div>
-        <div class="card">
-          <h3>Enfoque de trabajo</h3>
-          <p>Describe tu forma de acompañar: cercana, estructurada, orientada a resultados, etc.</p>
+      </article>
+  
+      <!-- Mi misión -->
+      <article class="vm-item">
+        <div class="vm-icon">
+          <!-- Aquí un faro de luz o camino iluminado -->
+          <img src="assets/img/icono-faro.png" alt="Faro de luz" />
         </div>
+        <div class="vm-text">
+          <h3>Mi misión</h3>
+          <p>
+            Acompañar a quienes desean mejorar su bienestar mental, emocional y físico,
+            guiándolos con un método seguro, eficaz y orientado a alcanzar los objetivos que
+            se proponen.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <br>
+  <section class="section-alt" id="lo-que-dicen">
+    <div class="container">
+      <h2>Lo que dicen quienes han trabajado conmigo</h2>
+      <p class="loque-intro">
+        Voces reales que comparten cómo se sintieron acompañados, escuchados y
+        apoyados en su proceso terapéutico. Pequeños reflejos del impacto humano y
+        transformador que puede tener un espacio seguro para sanar.
+      </p>
+  
+      <div class="loque-grid">
+        <!-- Testimonio 1 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Heydi es una profesional excepcional. Su empatía y ética se sienten desde el
+            primer instante; te hace sentir escuchado, apoyado y nunca juzgado. Transformó
+            por completo la visión negativa que tenía sobre la terapia. Para mi sorpresa,
+            terminé disfrutando el proceso y encontrando en él un espacio seguro y valioso.
+          </p>
+          <p class="loque-name">— Joan C.</p>
+        </article>
+  
+        <!-- Testimonio 2 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Mi proceso con Heydi ha sido transformador. Desde el inicio se nota su calidad
+            humana, lo que permite abrirse con confianza y trabajar esas partes vulnerables
+            que uno suele ocultar, pero que necesitan sanar. Los cambios han sido evidentes
+            y me he sentido acompañado en cada paso.
+          </p>
+          <p class="loque-name">— Pablo B.</p>
+        </article>
+  
+        <!-- Testimonio 3 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Llegué a terapia por ansiedad y depresión. Como hombre, siempre me costó
+            abrirme emocionalmente, pero Heydi creó un ambiente de confianza que me
+            permitió hablar de mi situación sin miedo y comenzar a sanar. En el proceso
+            también aprendí a conocerme mejor.
+          </p>
+          <p class="loque-text">
+            Hoy mi vida es mucho más tranquila y feliz. Sané y recuperé una calidad de vida
+            que antes veía imposible. Estoy profundamente agradecido por el
+            acompañamiento recibido.
+          </p>
+          <p class="loque-name">— Juan M.</p>
+        </article>
+  
+        <!-- Testimonio 4 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            Estoy muy agradecida con Heydi por su trato profesional y su calidez humana. El
+            seguimiento que hace durante el proceso te hace sentir valorado, visible e
+            importante. Soy una persona mayor y, gracias a su paciencia y comprensión, pude
+            sentirme escuchada sin juicio por primera vez en mucho tiempo. Mejoré, recuperé
+            tranquilidad y volví a disfrutar de mi vida.
+          </p>
+          <p class="loque-name">— Rosa D.</p>
+        </article>
+  
+        <!-- Testimonio 5 -->
+        <article class="loque-card">
+          <p class="loque-text">
+            En consulta con Heydi me sentí contenida, escuchada y sorprendida con el
+            cambio desde la primera sesión. El proceso fue profundo, profesional y muy
+            humano.
+          </p>
+          <p class="loque-name">— María D.</p>
+        </article>
       </div>
     </div>
-  </section> --
-      BLOQUE EXTRA -->
+  </section>
 
  
   <!-- FOOTER COMÚN -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-top">
-        <img src="./assets/img/logo-blanco.png"/>
-        <div class="footer-social">
-          <a href="#" class="footer-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="footer-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="footer-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        </div>
+
+      <!-- LOGO COMPUESTO -->
+      <div class="footer-logo-group">
+
+         <img src="./assets/img/logo-blanco.png">
+         <img src="./assets/img/logortt.png">
+         <img src="./assets/img/logo IHA.png">
+        
       </div>
-      <p class="legal-text">
-        La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
-      </p>
+      
+
+      <!-- LEGAL -->
+      <div class="footer-legal">
+        <p class="legal-text">
+          La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
+        </p>
+
+        <div class="legal-links">
+          <a href="#">Política de privacidad</a>
+          <span>•</span>
+          <a href="#">Aviso legal</a>
+        </div>
+
+        <p class="copyright">
+          © 2025 Hipnosis para transformar. Todos los derechos reservados.
+        </p>
+      </div>
+
     </div>
   </footer>
-<script src="assets/js/menu.js"></script>
-  
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/menu.js"></script>
 </body>
 </html>

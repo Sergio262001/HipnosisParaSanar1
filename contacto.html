@@ -15,48 +15,75 @@
    <!-- HEADER COMÚN -->
   <header class="site-header">
     <div class="container header-inner">
+
+      <!-- IZQUIERDA: LOGO -->
       <div class="header-left">
-        <img src="./assets/img/logo-blanco.png"/>
+        <a href="index.html" class="brand" aria-label="Ir a inicio">
+          <img src="./assets/img/lg-sinnombre-grande.png" alt="Heydi Roncancio" />
+        </a>
       </div>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
         <ul>
-          <li class="nav-item dropdown">
-            <button class="nav-link">Terapias</button>
-            <div class="dropdown-menu">
-              <a href="index.html" class="dropdown-link active">Terapia RTT®</a>
-              <a href="tcc.html" class="dropdown-link">Terapia Cognitiva Conductual (TCC)</a>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">INICIO</a>
+          </li>
+
+          <!-- DROPDOWN TERAPIAS -->
+          <li class="nav-item dropdown" id="terapiasItem">
+            <button class="nav-link" id="btnTerapias" type="button" aria-expanded="false">
+              TERAPIAS
+            </button>
+
+            <div class="dropdown-menu" id="terapiasMenu" role="menu">
+              <a href="tcc.html" class="dropdown-link" role="menuitem">TCC — Terapia Cognitivo Conductual</a>
+              <a href="rtt.html" class="dropdown-link" role="menuitem">RTT® — Rapid Transformational Therapy</a>
             </div>
           </li>
+
+          <li class="nav-item dropdown" id="transformacionItem">
+  <button class="nav-link" id="btnTransformacion" type="button" aria-expanded="false">
+    TRANSFORMACIÓN
+  </button>
+
+  <div class="dropdown-menu" id="transformacionMenu" role="menu">
+    <a href="rtt-hombres.html" class="dropdown-link" role="menuitem">RTT para Hombres</a>
+    <a href="rtt-mujeres.html" class="dropdown-link" role="menuitem">RTT para Mujeres</a>
+  </div>
+</li>
+
           <li class="nav-item">
-            <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+            <a href="testimonios.html" class="nav-link">HISTORIAS DE TRANSFORMACIÓN</a>
           </li>
+
           <li class="nav-item">
-            <a href="testimonios.html" class="nav-link">Testimonios</a>
+            <a href="sobre-mi.html" class="nav-link">SOBRE MÍ</a>
           </li>
+
           <li class="nav-item">
-            <a href="descuentos.html" class="nav-link">Descuentos</a>
-          </li>
-          <li class="nav-item">
-            <a href="contacto.html" class="nav-link">Contacto</a>
+            <a href="contacto.html" class="nav-link">CONTACTO</a>
           </li>
         </ul>
       </nav>
 
+      <!-- DERECHA: REDES -->
       <div class="header-right">
         <span class="social-label">Síguenos</span>
         <div class="social-links">
-          <a href="#" class="social-pill" aria-label="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="social-pill" aria-label="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="social-pill" aria-label="WhatsApp">
-            <i class="bi bi-whatsapp"></i>
-          </a>
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/XXXXXXXXXXX" class="social-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
+
     </div>
   </header>
   <!-- CONTACTO -->
@@ -70,12 +97,12 @@
         </p>
 
         <div class="contact-card">
-          <p><i class="bi bi-whatsapp"></i> WhatsApp: +57 XXX XXX XXXX</p>
-          <p><i class="bi bi-envelope"></i> correo@ejemplo.com</p>
-          <p><i class="bi bi-camera-video"></i> Sesiones online por videollamada</p>
-        </div>
+          <p><i class="bi bi-whatsapp"></i> WhatsApp: +57 322 7054582</p>
+          <p><i class="bi bi-envelope"></i> hipnoterapiartt@gmail.com</p>
+          <p><i class="bi bi-camera-video"></i> Sesiones online y presenciales</p>
+        </div> 
 
-        <a href="https://wa.me/XXXXXXXXXXX" class="btn-primary btn-large">
+        <a href="https://wa.me/+573227054582" class="btn-primary btn-large">
           <i class="bi bi-whatsapp"></i> Escribirme por WhatsApp
         </a>
       </div>
@@ -108,19 +135,38 @@
   <!-- FOOTER COMÚN -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-top">
-        <img src="./assets/img/logo-blanco.png"/>
-        <div class="footer-social">
-          <a href="#" class="footer-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="footer-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="footer-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        </div>
+
+      <!-- LOGO COMPUESTO -->
+      <div class="footer-logo-group">
+
+         <img src="./assets/img/logo-blanco.png">
+         <img src="./assets/img/logortt.png">
+         <img src="./assets/img/logo IHA.png">
+        
       </div>
-      <p class="legal-text">
-        La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
-      </p>
+      
+
+      <!-- LEGAL -->
+      <div class="footer-legal">
+        <p class="legal-text">
+          La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
+        </p>
+
+        <div class="legal-links">
+          <a href="#">Política de privacidad</a>
+          <span>•</span>
+          <a href="#">Aviso legal</a>
+        </div>
+
+        <p class="copyright">
+          © 2025 Hipnosis para transformar. Todos los derechos reservados.
+        </p>
+      </div>
+
     </div>
   </footer>
-    <script src="assets/js/menu.js"></script>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/menu.js"></script>
 </body>
 </html>

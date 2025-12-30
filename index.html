@@ -16,323 +16,385 @@
   <!-- CSS principal -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
+
   <!-- HEADER COMÚN -->
   <header class="site-header">
     <div class="container header-inner">
+
+      <!-- IZQUIERDA: LOGO -->
       <div class="header-left">
-        <img src="./assets/img/logo-blanco.png"/>
+        <a href="index.html" class="brand" aria-label="Ir a inicio">
+          <img src="./assets/img/lg-sinnombre-grande.png" alt="Heydi Roncancio" />
+        </a>
       </div>
 
-      <nav class="main-nav" aria-label="Navegación principal">
+      <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
         <ul>
-          <li class="nav-item dropdown">
-            <button class="nav-link">Terapias</button>
-            <div class="dropdown-menu">
-              <a href="index.html" class="dropdown-link active">Terapia RTT®</a>
-              <a href="tcc.html" class="dropdown-link">Terapia Cognitiva Conductual (TCC)</a>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">INICIO</a>
+          </li>
+
+          <!-- DROPDOWN TERAPIAS -->
+          <li class="nav-item dropdown" id="terapiasItem">
+            <button class="nav-link" id="btnTerapias" type="button" aria-expanded="false">
+              TERAPIAS
+            </button>
+
+            <div class="dropdown-menu" id="terapiasMenu" role="menu">
+              <a href="tcc.html" class="dropdown-link" role="menuitem">TCC — Terapia Cognitivo Conductual</a>
+              <a href="index.html" class="dropdown-link" role="menuitem">RTT® — Rapid Transformational Therapy</a>
             </div>
           </li>
+
+          <li class="nav-item dropdown" id="transformacionItem">
+  <button class="nav-link" id="btnTransformacion" type="button" aria-expanded="false">
+    TRANSFORMACIÓN
+  </button>
+
+  <div class="dropdown-menu" id="transformacionMenu" role="menu">
+    <a href="transform-hombre.html" class="dropdown-link" role="menuitem">RTT para Hombres</a>
+    <a href="transform-mujeres.html" class="dropdown-link" role="menuitem">RTT para Mujeres</a>
+  </div>
+</li>
+
           <li class="nav-item">
-            <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+            <a href="testimonios.html" class="nav-link">HISTORIAS DE TRANSFORMACIÓN</a>
           </li>
+
           <li class="nav-item">
-            <a href="testimonios.html" class="nav-link">Testimonios</a>
+            <a href="sobre-mi.html" class="nav-link">SOBRE MÍ</a>
           </li>
+
           <li class="nav-item">
-            <a href="descuentos.html" class="nav-link">Descuentos</a>
-          </li>
-          <li class="nav-item">
-            <a href="contacto.html" class="nav-link">Contacto</a>
+            <a href="contacto.html" class="nav-link">CONTACTO</a>
           </li>
         </ul>
       </nav>
 
+      <!-- DERECHA: REDES -->
       <div class="header-right">
         <span class="social-label">Síguenos</span>
         <div class="social-links">
-          <a href="#" class="social-pill" aria-label="Instagram">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="social-pill" aria-label="Facebook">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="social-pill" aria-label="WhatsApp">
-            <i class="bi bi-whatsapp"></i>
-          </a>
+          <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://wa.me/+573227054582" class="social-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
+
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="que-es-rtt">
     <div class="container hero-inner">
+
       <div class="hero-text">
-       <!--  <div class="hero-highlight">
-          Terapia RTT® · Rapid Transformational Therapy
-        </div>
-        <h1>¿Qué es la Terapia RTT® (Rapid Transformational Therapy)?</h1>
-        <p>-->
-          RTT® es una terapia híbrida desarrollada por la terapeuta británica Marisa Peer. Este enfoque distintivo integra principios basados en neurociencia y combina lo más efectivo de la hipnoterapia, la psicoterapia, la Programación Neurolingüística (PNL) y la Terapia Cognitivo-Conductual (TCC). Su objetivo es generar cambios profundos, permanentes y orientados a la solución.
-        </p>
+        <h1>Hipnosis RTT®</h1>
+        <h3><em>Un proceso Premium que transforma tu vida desde la raíz</em></h3>
+
+        <br>
+        <a href="#cta" class="btn-primary">Quiero iniciar mi transformación</a>
+        <br><br>
+
+        <p>Este es un espacio terapéutico para volver a ti con calma y claridad.</p>
         <p>
-          RTT® trabaja directamente con la mente subconsciente. A través de un estado de relajación profunda —hipnosis segura en la que el consultante mantiene pleno control— se accede al origen emocional o cognitivo del problema. Desde allí, se identifican las creencias limitantes formadas en experiencias pasadas y se reinterpretan desde la perspectiva adulta actual.
+          Un lugar donde tu historia es escuchada con respeto, tu proceso se acompaña con sensibilidad y cada paso te acerca a una versión más libre, auténtica y plena de ti.
+          Un espacio para sanar, transformarte… y renacer.
         </p>
-        <p>
-          Una vez comprendida la raíz, RTT® facilita la liberación de emociones asociadas y la sustitución de patrones limitantes por nuevas creencias saludables, fortalecedoras y coherentes con una vida plena y equilibrada.
-        </p>
-        <p>
-          Generalmente, entre 1 y 3 sesiones son suficientes para abordar una problemática específica, identificar su causa, desinstalar el bloqueo y reprogramar la mente con los recursos necesarios para la transformación.
-        </p>
-        <p>
-          Trabaja con la mente subconsciente para encontrar el origen de creencias y patrones que te limitan, y ayudarte a crear nuevas asociaciones más sanas.
-        </p>
-        <a href="#cta" class="btn-primary">Explorar formación en RTT</a>
       </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: DOS COLUMNAS -->
+  <section class="section" id="subconsciente">
+    <div class="container two-cols">
+
+      <div>
+        <h1>Conoce el poder de tu mente subconsciente</h1>
+
+        <p>
+          La mente subconsciente almacena las creencias que formamos a partir de nuestras experiencias.
+          Muchas de ellas se crean en la infancia y continúan influyendo en cómo pensamos, sentimos y actuamos en la vida adulta.
+        </p>
+
+        <p>
+          Cuando deseamos un cambio profundo, es necesario trabajar en ese nivel, donde se encuentran los patrones que sostienen nuestros miedos, bloqueos y hábitos.
+        </p>
+
+        <p>
+          La transformación ocurre cuando reprogramamos el subconsciente y abrimos espacio a nuevas formas de vivir, sentir y decidir.
+        </p>
+      </div>
+
       <div class="hero-side">
-        <img src="assets/img/cerebro.png" alt="Ilustración de cerebro y ondas" />
+        <img src="assets/img/inicio-rtt.png" alt="Mente subconsciente" />
       </div>
+
     </div>
   </section>
 
-  <!-- SECCIONES EN DOS COLUMNAS / SOLO TEXTO -->
-
-  <section class="section" id="como-funciona">
+  <!-- SECCIÓN 2: DOS COLUMNAS (ANTES TE FALTABA LA 2DA COLUMNA) -->
+  <section class="section" id="que-es-la-terapia-rtt">
     <div class="container two-cols">
+
       <div>
-        <h2>¿Cómo nos afecta la mente subconsciente?</h2>
+        <h1>¿Qué es la Terapia RTT®?</h1>
+
         <p>
-          Nacemos sin miedos, traumas o creencias limitantes. A lo largo de la vida, cada experiencia recibe una interpretación: le damos un significado personal que, con el tiempo, se convierte en una creencia. Estas creencias, sean precisas o no, se almacenan en la mente subconsciente y forman los patrones que influyen en nuestra forma de pensar, sentir y actuar. Son estas asociaciones profundas las que moldean nuestra identidad y nuestra manera de relacionarnos con el mundo.
+          RTT® (Rapid Transformational Therapy) es un enfoque terapéutico moderno que integra hipnoterapia, psicoterapia, PNL y TCC para lograr cambios profundos y duraderos.
         </p>
+
         <p>
-          Por eso, cuando buscamos un cambio real, es esencial trabajar directamente con el subconsciente. Allí es donde se encuentran las raíces de muchos patrones que nos afectan hoy. Esta es la razón por la que RTT® resulta tan efectiva: porque permite acceder a ese nivel profundo para transformar las creencias que limitan nuestro bienestar.
+          A través de un estado de relajación segura, permite acceder al subconsciente, identificar la raíz del problema y transformar creencias limitantes formadas en el pasado.
         </p>
+
         <p>
-          RTT® ayuda a sanar eventos del pasado que influyen en tu presente y te impiden vivir la vida que deseas. No solo permite liberar el dolor emocional, sino también la huella que esas experiencias pudieron dejar en tus decisiones, hábitos y percepciones.
-        </p>
-        <p>
-          RTT® es reconocida internacionalmente por su efectividad. Su metodología ha sido premiada en múltiples ocasiones y cuenta con el respaldo de profesionales de la salud de todo el mundo. Además, importantes asociaciones como la American Medical Association, la British Medical Association y la American Psychological Association han reconocido el valor terapéutico de la hipnosis clínica. Organizaciones como la International Society for Clinical and Experimental Hypnosis, la European Society of Hypnosis in Psychotherapy and Psychosomatic Medicine y diversas sociedades de hipnosis clínica continúan fortaleciendo la investigación y la práctica profesional en este campo.
-        </p>
-        <p>
-          La transformación profunda es posible cuando trabajamos donde realmente se originan nuestras creencias: en la mente subconsciente.
+          El proceso facilita la liberación emocional y la instalación de nuevas creencias más saludables y coherentes con la vida que deseas construir.
         </p>
       </div>
-      <div>
-        <div class="hero-side">
-        <img src="assets/img/meditacion.png" alt="Persona meditando" /></div>
+
+      <div class="hero-side">
+        <img src="assets/img/rtt-2.png" alt="Terapia RTT" />
       </div>
+
     </div>
   </section>
 
-  <section class="section" id="como-funciona">
+  <!-- SECCIÓN 3: DOS COLUMNAS (CON IMAGEN CONTROLADA) -->
+  <section class="section" id="como-funciona-rtt">
     <div class="container two-cols">
-      <div>
-        <h2>¿En qué se diferencia la terapia RTT® de otras terapias?</h2>
-        <p>
-          RTT® es una terapia profunda y eficiente que accede directamente a la raíz del problema en la mente subconsciente. Su enfoque consiste en identificar cómo, cuándo y por qué se formaron las creencias y conductas que hoy generan malestar. En lugar de limitarse a tratar los síntomas, RTT® trabaja en el origen, lo que permite una transformación más rápida y sostenida.
-        </p>
-        <p>
-          A través del acceso guiado al subconsciente, se exploran las experiencias pasadas y las interpretaciones que dieron lugar a patrones limitantes. Una vez comprendida la causa raíz, se crea una nueva interpretación desde el presente, liberando bloqueos y reemplazando creencias que ya no sirven.
-        </p>
-        <p>
-          RTT® se apoya en principios de neuroplasticidad —la capacidad del cerebro para crear nuevas conexiones y rutas neuronales— facilitando la instalación de creencias más saludables, funcionales y coherentes con lo que la persona desea lograr. Este proceso de reprogramación mental impulsa cambios positivos y visibles en la vida diaria.
-        </p>
-        <p>
-          En esencia, RTT® transforma desde el origen, permitiendo avanzar de forma clara, rápida y significativa.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="como-funciona">
-    <div class="container two-cols">
       <div>
         <h2>¿Cómo funciona?</h2>
+
         <p>
-          A diferencia de otras terapias que se centran en el problema o desafío, trabajando solo la mente consciente, RTTⓇ ayuda al consultante a descubrir el origen de las creencias y comportamientos limitantes, utiliza una serie de técnicas que va directamente al subconsciente encontrando la raíz del problema, realizando una transformación profunda y única, así los cambios son sostenibles en el tiempo, porque no es algo superficial.
+          RTT® accede de forma directa al subconsciente para descubrir el origen de creencias y patrones que generan malestar.
+          En lugar de tratar solo los síntomas, trabaja en la raíz: identifica la experiencia donde se formó la creencia,
+          la resignifica desde el presente y libera el bloqueo.
         </p>
+
         <p>
-          RTTⓇ ayuda al consultante a transformar su problema actual y a avanzar con un nuevo conjunto de creencias más beneficiosas y positivas para el desarrollo de una mejor calidad de vida.
+          A través de la neuroplasticidad, instala nuevas creencias más saludables y funcionales.
+        </p>
+
+        <p>
+          El resultado: cambios claros, rápidos y sostenidos desde la base misma del problema.
+        </p>
+
+        <p>
+          RTT® es un proceso breve; se requiere de 1 a 3 sesiones para trabajar una problemática de manera efectiva, depende de cada persona.
         </p>
       </div>
+
+      <div class="hero-side">
+        <img src="assets/img/inicio-rtt3.png" alt="Proceso RTT" />
+      </div>
+
     </div>
   </section>
 
-  <section class="section" id="como-funciona">
+  <!-- CASOS -->
+  <section class="section" id="casos-rtt">
     <div class="container two-cols">
-      <div>
-        <h2>¿Cuándo debería usar RTT®?</h2>
-        <p>
-          RTT® es una excelente opción cuando buscas un cambio profundo y sostenible. Puede ayudarte especialmente en situaciones como:
-        </p>
-        <p>
-          Cuando te sientes superado, bloqueado o estancado, incluso después de haber intentado resolverlo por tu cuenta. Por ejemplo, si experimentas ansiedad, ataques de pánico, estados depresivos, inseguridades o bloqueos a nivel personal o profesional.
-        </p>
-        <p>
-          Cuando has tomado terapia y los cambios no se mantienen, o sientes que avanzas lentamente. RTT® puede ayudar a liberar bloqueos subconscientes que dificultan tu progreso, potenciando los resultados de tu proceso terapéutico.
-        </p>
-        <p>
-          Cuando deseas cambiar hábitos o áreas específicas de tu vida de manera más rápida y efectiva, utilizando un enfoque con fundamentos en neurociencia y técnicas comprobadas.
-        </p>
-        <p>
-          Cuando reconoces que tu mente influye en la dirección de tu vida y quieres liberar creencias o patrones internos que ya no contribuyen a tu bienestar ni a tus objetivos.
-        </p>
-        <p>
-          Cuando buscas sanar emocionalmente y vivir con mayor paz, claridad y equilibrio, mejorando tu salud mental, emocional e incluso física.
-        </p>
-        <p>
-          RTT® puede ser el puente hacia la transformación que estás lista(o) para alcanzar.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="como-funciona">
-    <div class="container two-cols">
-      <div>
-        <h2>¿Por qué tomar RTT®?</h2>
-        <p>
-          Porque la hipnosis cuenta con respaldo científico y múltiples estudios en neurociencia han demostrado la influencia del subconsciente en nuestras emociones, decisiones y comportamientos. Trabajar a este nivel permite generar cambios profundos que difícilmente se logran solo desde la mente consciente.
-        </p>
-        <p>
-          RTT® ofrece una manera segura, accesible y eficaz de mejorar tu bienestar y transformar aspectos importantes de tu vida. Te brinda la oportunidad de potenciar tu crecimiento personal, liberar bloqueos y avanzar hacia una versión más plena y equilibrada de ti misma(o).
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="como-funciona">
-    <div class="container two-cols">
       <div>
         <h2>¿En qué casos me puede ayudar RTTⓇ?</h2>
-        <p>
-          RTT® es un enfoque profundo y efectivo que puede ayudarte en numerosas áreas emocionales, mentales, físicas y profesionales. Estos son algunos de los casos más comunes en los que esta terapia ha mostrado excelentes resultados:
-        </p>
-        <p>
-          - Adicciones<br>
-          - Alimentación desequilibrada y sobrepeso<br>
-          - Ansiedad<br>
-          - Apegos insanos<br>
-          - Autoestima y autoconfianza<br>
-          - Autoimagen negativa<br>
-          - Auto sabotaje<br>
-          - Bloqueos creativos<br>
-          - Bloqueos de idioma<br>
-          - Bloqueos mentales<br>
-          - Burnout o agotamiento extremo<br>
-          - Cambio de mentalidad y creencias limitantes<br>
-          - Comunicación y hablar en público<br>
-          - Concentración, enfoque y memoria<br>
-          - Conductas repetitivas no deseadas<br>
-          - Control del dolor crónico<br>
-          - Depresión<br>
-          - Dependencia emocional<br>
-          - Dificultad para tomar decisiones<br>
-          - Dominio de idiomas (bloqueos mentales asociados)<br>
-          - Duelo mal gestionado<br>
-          - Estrés postraumático (TEPT- Trastorno de estrés postraumático)<br>
-          - Estrés e insomnio<br>
-          - Éxito profesional (limpieza de bloqueos, claridad, motivación)<br>
-          - Fertilidad y preparación emocional<br>
-          - Fobias y miedos<br>
-          - Hábitos nocivos<br>
-          - Heridas emocionales (de la infancia, de insuficiencia, etc.)<br>
-          - Hiperexigencia y perfeccionismo<br>
-          - Liderazgo<br>
-          - Límites personales<br>
-          - Luto emocional (procesos no resueltos)<br>
-          - Manejo de ira<br>
-          - Memoria, concentración, enfoque<br>
-          - Mentalidad obsoleta<br>
-          - Miedos (a fallar, al éxito, al rechazo, etc.)<br>
-          - Motivación y constancia<br>
-          - Pensamiento negativo<br>
-          - Procrastinación<br>
-          - Problemas de dinero y creencias de escasez<br>
-          - Problemas emocionales y traumas<br>
-          - Problemas físicos vinculados a la mente subconsciente<br>
-          - Problemas relacionales (amorosos, familiares o profesionales)<br>
-          - Regeneración emocional y reprogramación mental<br>
-          - Rendimiento académico<br>
-          - Rendimiento físico y mental<br>
-          - Resolución de conflictos<br>
-          - Resultados profesionales (ventas, emprendimiento, liderazgo)<br>
-          - Salud emocional y regulación interna<br>
-          - Síndrome del impostor<br>
-          - Síndrome de Burnout
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="como-funciona">
-    <div class="container two-cols">
-      <div>
-        <h2>¿Qué debo esperar de una sesión de RTT®?</h2>
         <p>
-          En una sesión de RTT®, el profesional te guía a un estado profundo de relajación que facilita el acceso a tu mente subconsciente. Desde allí, podrás identificar el origen de la dificultad que estás experimentando, así como los significados y creencias que se formaron en ese momento.
+          RTT® puede apoyar procesos emocionales, mentales y conductuales como ansiedad, autoestima, bloqueo profesional,
+          relaciones, duelo, hábitos, inseguridades, patrones repetitivos y más, tales como:
         </p>
-        <p>
-          Juntos, explorarán esos recuerdos desde tu perspectiva adulta actual, lo que permite reinterpretarlos y liberar patrones limitantes. A partir de este proceso, el profesional te ayudará a integrar nuevas creencias y asociaciones más saludables y constructivas.
-        </p>
-        <p>
-          Para consolidar estos cambios, recibirás un audio de reprogramación personalizado que deberás escuchar durante 21 a 30 días, favoreciendo así la creación de nuevas conexiones mentales y un cambio positivo a largo plazo.
-        </p>
+
+        <!-- GRID 3 COLUMNAS -->
+        <div class="cases-grid-3">
+          <!-- Columna 1 -->
+          <ul class="cases-col">
+            <li>Adicciones</li>
+            <li>Ansiedad</li>
+            <li>Apegos insanos</li>
+            <li>Autoestima y autoconfianza</li>
+            <li>Bloqueos mentales / creencias limitantes</li>
+            <li>Comunicación y hablar en público</li>
+            <li>Conductas repetitivas no deseadas</li>
+            <li>Control del dolor crónico</li>
+            <li>Depresión</li>
+            <li>Dependencia emocional</li>
+          </ul>
+
+          <!-- Columna 2 -->
+          <ul class="cases-col">
+            <li>Desórdenes Alimenticios (Alimentación/Dieta, Problemas De Peso, Anorexia, Bulimia)</li>
+            <li>Disciplina</li>
+            <li>Estrés e insomnio</li>
+            <li>Estrés postraumático (TEPT- Trastorno de estrés postraumático)</li>
+            <li>Éxito profesional (eliminación de bloqueos, claridad, motivación)</li>
+            <li>Fobias y miedos (miedo a fallar, al éxito, al rechazo, etc.)</li>
+            <li>Heridas emocionales (de la infancia, de insuficiencia etc.)</li>
+            
+          </ul>
+
+          <!-- Columna 3 -->
+          <ul class="cases-col">
+            <li>Logro de metas</li>
+            <li>Manejo de ira</li>
+            <li>Rendimiento académico: Memoria, concentración, enfoque</li>
+            <li>Problemas sexuales (reactiva tu energía vital)</li>
+            <li>Problemas físicos vinculados a la mente subconsciente (audición, visión, movilidad, pérdida de la voz)</li>
+            <li>Rendimiento deportivo</li>
+            <li>Liderazgo</li>
+            <li>Límites personales</li>
+          </ul>
+        </div>
+
+        <!-- CTA "Conoce más aquí" -->
+        <div class="cases-cta">
+          <a href="que-es-rtt.html" class="cases-link-box">
+            Conoce más aquí
+          </a>
+        </div>
+
       </div>
+
+      <!-- Columna derecha vacía controlada (evita que el zigzag se rompa si quieres mantener el patrón) -->
+      <div></div>
+
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="section" id="faq">
     <div class="container">
-      <h2>Preguntas frercuentes</h2>
+      <h2>Preguntas frecuentes</h2>
 
       <div class="faq">
+
         <details class="faq-item">
-          <summary>¿Cómo funciona RTT®?</summary>
+          <summary>¿En qué casos puede ayudar RTT®?</summary>
           <div class="faq-content">
             <p>
-              RTT® combina técnicas terapéuticas que permiten al profesional guiarte hacia un estado de relajación profunda (hipnosis). Desde allí, accedes a tu mente subconsciente para identificar la raíz del problema, en lugar de abordar únicamente los síntomas.
+              RTT® puede apoyar procesos emocionales, mentales y conductuales como ansiedad, autoestima, bloqueo profesional, relaciones, duelo, hábitos,
+              inseguridades, patrones repetitivos y más. Este enfoque profundo y orientado a la causa es lo que ha llevado a RTT® a obtener reconocimiento y eficacia a nivel internacional.
             </p>
+
+            <div class="cases-grid-3">
+              <ul class="cases-col">
+                <li>Adicciones (alcohol, tabaco, pornografía, juegos, sustancias psicoactivas, entre otros)</li>
+                <li>Ansiedad</li>
+                <li>Apegos insanos</li>
+                <li>Autoestima y autoconfianza</li>
+                <li>Auto sabotaje</li>
+                <li>Bloqueos creativos</li>
+                <li>Bloqueos de idioma</li>
+                <li>Bloqueos mentales / creencias limitantes, negativas</li>
+                <li>Burnout o agotamiento extremo</li>
+                <li>Comunicación y hablar en público</li>
+                <li>Concentración, enfoque y memoria</li>
+                <li>Conductas repetitivas no deseadas</li>
+                <li>Control del dolor crónico</li>
+                <li>Crecimiento del cabello</li>
+                <li>Culpa</li>
+                <li>Depresión</li>
+                <li>Dependencia emocional</li>
+                <li>Desórdenes alimenticios (alimentación/dieta, problemas de peso, anorexia, bulimia)</li>
+              </ul>
+
+              <ul class="cases-col">
+                <li>Disciplina</li>
+                <li>Dominio de idiomas (bloqueos mentales asociados)</li>
+                <li>Duelo mal gestionado (procesos no resueltos)</li>
+                <li>Estrés e insomnio</li>
+                <li>Estrés postraumático (TEPT – Trastorno de estrés postraumático)</li>
+                <li>Éxito profesional (eliminación de bloqueos, claridad, motivación)</li>
+                <li>Fertilidad y preparación emocional (fertilidad, fertilización in vitro, concepción, embarazo, parto)</li>
+                <li>Fobias y miedos (miedo a fallar, al éxito, al rechazo, etc.)</li>
+                <li>Hábitos nocivos</li>
+                <li>Heridas emocionales (de la infancia, de insuficiencia, etc.)</li>
+                <li>Hiperexigencia y perfeccionismo</li>
+                <li>Liderazgo</li>
+                <li>Límites personales</li>
+                <li>Logro de metas</li>
+                <li>Manejo de ira</li>
+                <li>Memoria, concentración y enfoque</li>
+              </ul>
+
+              <ul class="cases-col">
+                <li>Problemas de dinero y creencias de escasez</li>
+                <li>Problemas emocionales y traumas</li>
+                <li>Problemas físicos vinculados a la mente subconsciente (audición, visión, movilidad, pérdida de la voz, entre otros)</li>
+                <li>Problemas relacionales (amorosos, familiares o profesionales)</li>
+                <li>Problemas sexuales (reactiva tu energía vital)</li>
+                <li>Regeneración emocional y reprogramación mental</li>
+                <li>Rendimiento académico</li>
+                <li>Rendimiento físico y mental</li>
+                <li>Resolución de conflictos</li>
+                <li>Resultados profesionales (ventas, emprendimiento, liderazgo)</li>
+                <li>Salud emocional y regulación interna</li>
+                <li>Síndrome del impostor</li>
+                <li>Síndrome de burnout</li>
+                <li>TOC (Trastorno Obsesivo Compulsivo)</li>
+                <li>Motivación y constancia</li>
+                <li>Problemas de la piel</li>
+                <li>Dificultad para tomar decisiones</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué incluye una sesión de RTT®?</summary>
+          <div class="faq-content">
+            <p>Pre-sesión personalizada (40–60 min): un espacio seguro para explorar tu objetivo y comprender la raíz de lo que deseas transformar.</p>
+            <p>Sesión RTT® profunda (90–120 min): técnica guiada que te lleva a un estado de relajación donde accedes a insights clave y generas cambios reales desde la raíz.</p>
+            <p>Acompañamiento durante 3 semanas: seguimiento cercano para integrar avances y asegurar que el cambio se mantenga.</p>
+            <p>Llamada de cierre (15–20 min): revisión final de resultados y alineación del nuevo enfoque que llevarás a tu vida.</p>
+            <p>RTT® es un proceso diseñado para lograr cambios reales y duraderos, incluso en áreas donde otras terapias no han funcionado.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Cuántas sesiones de RTT® se necesita para obtener resultados?</summary>
+          <div class="faq-content">
+            <p>RTT® suele generar cambios significativos en 1 a 3 sesiones, según la profundidad del tema.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué hace diferente a la terapia RTT®?</summary>
+          <div class="faq-content">
             <p>
-              Durante este proceso, exploras el origen de la experiencia desde tu perspectiva adulta actual. Esto facilita una nueva interpretación, la liberación de patrones limitantes y la creación de creencias más saludables. Esta reprogramación mental te ayuda a pensar, sentir y actuar de manera más positiva, plena y equilibrada.
-            </p>
-            <p>
-              Este enfoque profundo y orientado a la causa es lo que ha llevado a RTT® a obtener reconocimiento y eficacia a nivel internacional.
+              RTT® es un enfoque terapéutico reconocido y premiado a nivel internacional por su innovación y efectividad.
+              Es un proceso seguro y estructurado que trabaja en la raíz emocional de los problemas.
             </p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>¿Para qué se utiliza RTT®?</summary>
+          <summary>¿RTT® siempre da resultados?</summary>
           <div class="faq-content">
             <p>
-              RTT® es un enfoque terapéutico integral y orientado a soluciones, lo que permite aplicarlo en una amplia variedad de áreas. Ha demostrado resultados extraordinarios al ayudar a las personas a superar desafíos emocionales, mentales y físicos, como ansiedad, depresión, miedos, fobias, baja autoestima, problemas de salud física, control de peso, trastornos alimentarios y bloqueos personales o profesionales, entre otros.
-            </p>
-            <p>
-              Gracias a su capacidad para trabajar desde la raíz del problema, RTT® puede utilizarse de manera efectiva en múltiples tipos de dificultades y objetivos de cambio. Obtenga más información en ¿qué casos puede usarse RTT®?
+              RTT® es altamente efectiva; sin embargo, cada proceso es único. Los resultados dependen de la apertura, compromiso y disposición de la persona.
+              Aun así, la mayoría experimenta cambios profundos y duraderos.
             </p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>¿Cuántas sesiones de RTT® se necesita para obtener resultados RTT®?</summary>
+          <summary>¿Puede RTT® ayudar en problemas físicos o crónicos?</summary>
           <div class="faq-content">
             <p>
-              La cantidad de sesiones puede variar según cada persona y el tema a trabajar. En la mayoría de los casos, RTT® requiere entre 1 y 3 sesiones por problema, siempre que el consultante se comprometa con el proceso y complete todas las etapas, incluido el audio de reprogramación, para lograr resultados óptimos.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿Cuál es la diferencia entre la hipnoterapia y la RTT®?</summary>
-          <div class="faq-content">
-            <p>
-              La hipnoterapia utiliza la hipnosis para acceder al subconsciente y promover cambios mediante sugestiones positivas. Suele enfocarse en reforzar nuevos patrones sin profundizar en el origen del problema, por lo que normalmente requiere varias sesiones para consolidar resultados.
-            </p>
-            <p>
-              RTT® (Terapia de Transformación Rápida) también emplea la hipnosis, pero su enfoque es diferente: busca identificar la raíz del problema y comprender cuándo y cómo se formaron las creencias limitantes. Esta claridad permite que el consultante experimente una transformación más rápida y profunda, ya que el cambio surge de una comprensión interna y no solo de la sugestión. Por ello, RTT® suele generar resultados en menos sesiones que la hipnoterapia tradicional.
+              Sí. RTT® puede contribuir a disminuir o aliviar síntomas físicos al trabajar la raíz emocional asociada, gracias al vínculo mente–cuerpo.
+              No reemplaza tratamientos médicos, pero los complementa.
             </p>
           </div>
         </details>
@@ -341,139 +403,17 @@
           <summary>¿Pierdo el control de mi mente durante la terapia de RTT®?</summary>
           <div class="faq-content">
             <p>
-              No. En una sesión de RTT® permaneces consciente y en control en todo momento. Participas activamente en el proceso, explorando recuerdos, emociones y bloqueos para comprenderlos y transformarlos. Lo único que experimentarás es un estado profundo de relajación y una mayor conexión contigo mismo.
+              No. En una sesión de RTT® permaneces consciente y en control en todo momento.
+              La hipnosis es un estado de relajación, no de pérdida de control.
             </p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>¿Cuántas sesiones de RTT® necesito para trabajar una problemática y ver resultados?</summary>
+          <summary>¿La sesión virtual de RTT® es igual de efectiva que la presencial?</summary>
           <div class="faq-content">
             <p>
-              De una a tres sesiones, depende de tu mente, como ella reciba la reprogramación dada.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿Qué compone la sesión de RTT®?</summary>
-          <div class="faq-content">
-            <p>
-              Una pre sesión, para conocer la problemática a trabajar, video llamada de 40 a  60 minutos máximo.<br>
-              Sesión de terapia RTT®  de 90 a 120 minutos aproximadamente, depende de cada caso, los cuales sentirás como 15 minutos de relajación.<br>
-              Seguimiento por mensajes durante las siguientes 3 semanas, para verificación de proceso.<br>
-              Cuarta semana, llamada para cierre y verificación de resultados (15 – 20 minutos)
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿RTT® Siempre da resultados?</summary>
-          <div class="faq-content">
-            <p>
-              RTT® genera cambios significativos en la mayoría de los casos. Al identificar el origen de las creencias limitantes y comprender cómo se formaron, se produce un efecto liberador que permite reinterpretar esas experiencias y recuperar el control en esa área de tu vida. Este entendimiento profundo facilita una transformación real y abre camino a resultados más positivos y sostenibles.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿Funciona en niños?</summary>
-          <div class="faq-content">
-            <p>
-              Sí, la terapia les puede ayudar en temas como: mejor rendimiento académico, mejora de autoestima y confianza, rendimiento deportivo, habilidades sociales, eliminación de miedos, fobias, entre muchos otros. Se recomienda realizar RTT® en niños mayores de 6 años.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿La terapia RTT® tiene aval científico?</summary>
-          <div class="faq-content">
-            <p>
-              RTT® se basa en la hipnosis, una técnica reconocida por asociaciones médicas y psicológicas de prestigio. Por ejemplo:
-            </p>
-            <p>
-              En 1958, la American Medical Association (AMA) validó la hipnosis como herramienta terapéutica válida para médicos y psicólogos.
-            </p>
-            <p>
-              La American Psychological Association (APA) creó la División 30 (“Psychological Hypnosis”) para estudiar la hipnosis como fenómeno clínico y experimental.
-            </p>
-            <p>
-              Organizaciones como la International Society for Clinical and Experimental Hypnosis y la European Society of Hypnosis in Psychotherapy and Psychosomatic Medicine promueven la investigación científica y la práctica profesional de la hipnosis.
-            </p>
-            <p>
-              Además, instituciones médicas reconocidas, como la Mayo Clinic, integran la hipnosis en su oferta terapéutica para tratar el dolor, la ansiedad y otros síntomas clínicos.
-            </p>
-            <p>
-              En resumen, aunque la investigación en hipnosis sigue avanzando, existe un sólido respaldo institucional y científico que apoya su uso terapéutico, y por extensión, sustenta la eficacia de RTT®.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿Puede la Terapia Transformacional (RTT®) ayudar en problemas de salud física o enfermedades crónicas?</summary>
-          <div class="faq-content">
-            <p>
-              Sí. La ciencia apoya la conexión entre mente y cuerpo: el bienestar emocional influye en la salud física. La Organización Mundial de la Salud (OMS) define la salud como un estado de completo bienestar físico, mental y social, no solo la ausencia de enfermedad.
-            </p>
-            <p>
-              Numerosos estudios muestran que el estrés emocional y las emociones no gestionadas están relacionados con síntomas físicos y enfermedades crónicas.
-            </p>
-            <p>
-              Al trabajar con RTT® para abordar la raíz emocional de los problemas, es posible aliviar o reducir significativamente los síntomas físicos. Esta intervención no sustituye tratamientos médicos, pero puede complementarlos de forma poderosa, favoreciendo una sanación más profunda y duradera.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿La sesión virtual de RTT®  es igual de efectiva que la presencial?</summary>
-          <div class="faq-content">
-            <p>
-              Sí. Las sesiones virtuales de RTT® han demostrado ser igual de efectivas que las presenciales, ya que la técnica no requiere contacto físico y el proceso terapéutico se desarrolla por completo a través de la guía verbal.
-            </p>
-            <p>
-              Además, realizar la sesión desde un entorno propio y cómodo suele facilitar una relajación más profunda, lo que favorece la experiencia y los resultados. La modalidad virtual también optimiza el tiempo, elimina desplazamientos y permite acceder a la sesión desde cualquier lugar del mundo.
-            </p>
-            <p>
-              Lo único necesario es contar con un espacio tranquilo, sin interrupciones y con buena conexión.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿Es segura la hipnoterapia RTT®?</summary>
-          <div class="faq-content">
-            <p>
-              Sí. El trance hipnótico es un estado completamente natural de la mente. Durante la hipnosis se accede a las ondas cerebrales alfa, un nivel de profunda concentración en el que la consciencia se mantiene activa y la mente subconsciente está más receptiva.
-            </p>
-            <p>
-              En este estado, la mente solo acepta información con la que está de acuerdo, por lo que el proceso es seguro y respetuoso. Es comparable a esos momentos en los que estás totalmente enfocado en una actividad: mientras mayor es la concentración, mayor es también el control mental.
-            </p>
-            <p>
-              RTT® utiliza este estado natural para facilitar comprensión, cambio y bienestar de manera efectiva y segura.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>¿En qué casos NO se recomienda tomar RTT®?</summary>
-          <div class="faq-content">
-            <p>
-              RTT® implica hipnosis clínica, por lo que sus contraindicaciones se alinean en gran medida con las de la hipnosis terapéutica tradicional. Algunos casos en los que no es recomendable:
-            </p>
-            <p>
-              Personas con trastornos psicóticos activos, como esquizofrenia, ya que la hipnosis puede agravar síntomas como alucinaciones o desorganización mental.
-            </p>
-            <p>
-              Personas con epilepsia no controlada, debido al riesgo de crisis durante el estado hipnótico, a excepción de algunos casos solo con el aval de su médico tratante.
-            </p>
-            <p>
-              Individuos que atraviesan una inestabilidad emocional severa, especialmente si están en medio de crisis, ya que la regresión hipnótica podría intensificar el malestar emocional.
-            </p>
-            <p>
-              Además, es fundamental que la hipnosis clínica sea realizada por un profesional calificado y con formación específica.
-            </p>
-            <p>
-              Por lo tanto, si tienes alguna condición médica o psiquiátrica, es muy recomendable hablar previamente con tu terapeuta RTT® y, de ser necesario, con tu médico tratante para evaluar si la terapia es segura y adecuada para ti.
+              Sí. RTT® funciona con la misma eficacia en formato online, siempre que la persona esté en un entorno cómodo, seguro y sin interrupciones.
             </p>
           </div>
         </details>
@@ -482,25 +422,42 @@
     </div>
   </section>
 
+
   <!-- FOOTER COMÚN -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-top">
-        <img src="./assets/img/logo-blanco.png"/>
-        <div class="footer-social">
-          <a href="#" class="footer-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="footer-pill" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://wa.me/XXXXXXXXXXX" class="footer-pill" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        </div>
+
+      <!-- LOGO COMPUESTO -->
+      <div class="footer-logo-group">
+
+         <img src="./assets/img/logo-blanco.png">
+         <img src="./assets/img/logortt.png">
+         <img src="./assets/img/logo IHA.png">
+        
       </div>
-      <p class="legal-text">
-        La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
-      </p>
+      
+
+      <!-- LEGAL -->
+      <div class="footer-legal">
+        <p class="legal-text">
+          La información y los recursos que se encuentran en este sitio se proporcionan únicamente con fines informativos y no pretenden ser un consejo médico, ni deben utilizarse como alternativa al consejo o tratamiento médico prescrito por un profesional de la salud, ni para diagnosticar, curar o prevenir ninguna enfermedad o afección médica.
+        </p>
+
+        <div class="legal-links">
+          <a href="#">Política de privacidad</a>
+          <span>•</span>
+          <a href="#">Aviso legal</a>
+        </div>
+
+        <p class="copyright">
+          © 2025 Hipnosis para transformar. Todos los derechos reservados.
+        </p>
+      </div>
+
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- SCRIPTS -->
   <script src="assets/js/menu.js"></script>
-
 </body>
 </html>
