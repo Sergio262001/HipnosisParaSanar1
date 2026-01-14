@@ -137,3 +137,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// =========================
+// CTA -> Abrir primera FAQ
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("btn-faq");
+  const faq = document.getElementById("faq-primera");
+
+  if (!btn || !faq) return;
+
+  btn.addEventListener("click", (e) => {
+    // Evita que el anchor salte "a lo bruto"
+    e.preventDefault();
+
+    // Abre la primera pregunta
+    faq.open = true;
+
+    // Baja suave hasta esa pregunta
+    faq.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});

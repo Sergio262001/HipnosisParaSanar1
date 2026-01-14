@@ -1,0 +1,197 @@
+/* =====================================================
+   RTT – DOCUMENTO LIMPIO
+   - Quita zig-zag
+   - Imagen arriba
+   - Texto abajo
+   ===================================================== */
+
+/* 1️⃣ Desactivamos el zig-zag SOLO para esta página */
+#subconsciente .two-cols,
+#que-es-la-terapia-rtt .two-cols,
+#como-funciona-rtt .two-cols {
+  display: flex;              /* reemplaza grid */
+  flex-direction: column;     /* imagen arriba, texto abajo */
+  align-items: center;
+  gap: 32px;
+}
+
+/* 2️⃣ Imagen arriba, centrada y controlada */
+#subconsciente .hero-side img,
+#que-es-la-terapia-rtt .hero-side img,
+#como-funciona-rtt .hero-side img {
+  width: 100%;
+  max-width: 900px;
+  max-height: 460px;          /* controla altura visual */
+  object-fit: cover;
+  border-radius: 28px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 3️⃣ Texto debajo, centrado y con ancho cómodo */
+#subconsciente .two-cols > div:first-child,
+#que-es-la-terapia-rtt .two-cols > div:first-child,
+#como-funciona-rtt .two-cols > div:first-child {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* 4️⃣ Texto más legible */
+#subconsciente p,
+#que-es-la-terapia-rtt p,
+#como-funciona-rtt p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+
+/* =====================================================
+   RTT – AJUSTE 2 COLUMNAS (SIN ZIGZAG)
+   - Texto un poco más grande
+   - Imágenes un poco más pequeñas
+   - Alineación por altura (centro vertical)
+   - SOLO para esta página/secciones
+   ===================================================== */
+
+/* 1) Quitamos el zig-zag SOLO en estas secciones */
+#subconsciente.section:nth-of-type(even) .two-cols > div:first-child,
+#subconsciente.section:nth-of-type(even) .two-cols > div:last-child,
+#que-es-la-terapia-rtt.section:nth-of-type(even) .two-cols > div:first-child,
+#que-es-la-terapia-rtt.section:nth-of-type(even) .two-cols > div:last-child,
+#como-funciona-rtt.section:nth-of-type(even) .two-cols > div:first-child,
+#como-funciona-rtt.section:nth-of-type(even) .two-cols > div:last-child{
+  order: initial; /* ✅ vuelve al orden normal */
+}
+
+/* 2) Layout: 2 columnas, pero con proporción más “texto” y menos “imagen” */
+#subconsciente .two-cols,
+#que-es-la-terapia-rtt .two-cols,
+#como-funciona-rtt .two-cols{
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); /* + espacio para texto */
+  align-items: center; /* ✅ alinea altura del texto con la imagen */
+  gap: 40px;           /* un poco más de aire */
+}
+
+/* 3) Texto más grande y más legible */
+#subconsciente h1,
+#que-es-la-terapia-rtt h1,
+#como-funciona-rtt h2{
+  font-size: clamp(1.8rem, 2.2vw, 2.2rem); /* título más grande */
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+#subconsciente p,
+#que-es-la-terapia-rtt p,
+#como-funciona-rtt p{
+  font-size: 1.06rem;   /* ✅ sube la letra */
+  line-height: 1.75;    /* más lectura */
+  max-width: 58ch;      /* controla el ancho del texto para que no se estire */
+}
+
+/* 4) Imágenes más pequeñas, sin deformar */
+#subconsciente .hero-side img,
+#que-es-la-terapia-rtt .hero-side img,
+#c
+
+
+
+
+
+
+
+/* =====================================================
+   RTT – DOCUMENTO LIMPIO
+   - Quita zig-zag
+   - Imagen arriba
+   - Texto abajo
+   ===================================================== */
+
+/* 1️⃣ Desactivamos el zig-zag SOLO para esta página */
+#subconsciente .two-cols,
+#que-es-la-terapia-rtt .two-cols,
+#como-funciona-rtt .two-cols {
+  display: flex;              /* reemplaza grid */
+  flex-direction: column;     /* imagen arriba, texto abajo */
+  align-items: center;
+  gap: 32px;
+}
+
+/* 2️⃣ Imagen arriba, centrada y controlada */
+#subconsciente .hero-side img,
+#que-es-la-terapia-rtt .hero-side img,
+#como-funciona-rtt .hero-side img {
+  width: 100%;
+  max-width: 900px;
+  max-height: 460px;          /* controla altura visual */
+  object-fit: cover;
+  border-radius: 28px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 3️⃣ Texto debajo, centrado y con ancho cómodo */
+#subconsciente .two-cols > div:first-child,
+#que-es-la-terapia-rtt .two-cols > div:first-child,
+#como-funciona-rtt .two-cols > div:first-child {
+  max-width: 900px;
+  text-align: center;
+}
+
+/* 4️⃣ Texto más legible */
+#subconsciente p,
+#que-es-la-terapia-rtt p,
+#como-funciona-rtt p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+
+/* =====================================================
+   RTT – AJUSTE 2 COLUMNAS (SIN ZIGZAG)
+   - Texto un poco más grande
+   - Imágenes un poco más pequeñas
+   - Alineación por altura (centro vertical)
+   - SOLO para esta página/secciones
+   ===================================================== */
+
+/* 1) Quitamos el zig-zag SOLO en estas secciones */
+#subconsciente.section:nth-of-type(even) .two-cols > div:first-child,
+#subconsciente.section:nth-of-type(even) .two-cols > div:last-child,
+#que-es-la-terapia-rtt.section:nth-of-type(even) .two-cols > div:first-child,
+#que-es-la-terapia-rtt.section:nth-of-type(even) .two-cols > div:last-child,
+#como-funciona-rtt.section:nth-of-type(even) .two-cols > div:first-child,
+#como-funciona-rtt.section:nth-of-type(even) .two-cols > div:last-child{
+  order: initial; /* ✅ vuelve al orden normal */
+}
+
+/* 2) Layout: 2 columnas, pero con proporción más “texto” y menos “imagen” */
+#subconsciente .two-cols,
+#que-es-la-terapia-rtt .two-cols,
+#como-funciona-rtt .two-cols{
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); /* + espacio para texto */
+  align-items: center; /* ✅ alinea altura del texto con la imagen */
+  gap: 40px;           /* un poco más de aire */
+}
+
+/* 3) Texto más grande y más legible */
+#subconsciente h1,
+#que-es-la-terapia-rtt h1,
+#como-funciona-rtt h2{
+  font-size: clamp(1.8rem, 2.2vw, 2.2rem); /* título más grande */
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+#subconsciente p,
+#que-es-la-terapia-rtt p,
+#como-funciona-rtt p{
+  font-size: 1.06rem;   /* ✅ sube la letra */
+  line-height: 1.75;    /* más lectura */
+  max-width: 58ch;      /* controla el ancho del texto para que no se estire */
+}
+
+/* 4) Imágenes más pequeñas, sin deformar */
+#subconsciente .hero-side img,
+#que-es-la-terapia-rtt .hero-side img,
+#c

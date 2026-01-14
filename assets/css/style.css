@@ -138,12 +138,11 @@ img {
   position: sticky;
   top: 0;
   z-index: 200;
-
   background-color: #137F8F;
   /* OJO: si el archivo real se llama "headerbackground2.png", cámbialo */
   background-image: url("../img/haederbackground2.png");
   background-repeat: no-repeat;
-  background-position: 0px -40px;
+  background-position: 0px -0px;
   background-size: cover;
 
   min-height: unset;
@@ -690,48 +689,85 @@ img {
 
 
 /* =====================================================
-   13. FOOTER
+   13. FOOTER (LOGOS CONTROLADOS + MISMO RANGO QUE TEXTO)
    ===================================================== */
-.site-footer {
-  background: var(--color-footer-bg);
-  color: #e5e7eb;
-  padding: 20px 0 24px;
-  font-size: 0.8rem;
-  margin-top: auto;
-}
 
-.footer-inner {
-  max-width: 1100px;
+/* 1) Rango/ancho igual al texto (logos + aviso + links) */
+.footer-legal{
+  max-width: 920px;      /* rango pro (más angosto que 1100) */
   margin: 0 auto;
-  padding: 0 16px;
 }
 
-/* LOGOS FOOTER (3 LOGOS RESPONSIVE) */
-.footer-logo-group {
+/* 2) Grupo de logos (control en bloque) */
+.footer-logo-group{
+  --logos-gap: 56px;     /* 80px era demasiado */
+  --logos-max-h: 90px;   /* más grandes sin romper */
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 130px;
-  margin-bottom: 18px;
+  gap: var(--logos-gap);
   flex-wrap: wrap;
+
+  padding: 10px 0 6px;   /* evita que queden pegados arriba */
+  margin: 0 auto 14px;
 }
 
-.footer-logo-group img,
-.footer-logo {
-  max-width: 160px;
-  width: 100%;
+/* 3) Base para todos los logos */
+.footer-logo{
+  max-height: var(--logos-max-h);
+  width: auto;
   height: auto;
+  object-fit: contain;
   opacity: 0.95;
+
+  display: block;
+  transform-origin: center;
+
+  /* Ajustes finos por logo */
+  transform: translate(var(--x, 0px), var(--y, 0px)) scale(var(--s, 1));
 }
 
-.footer-logo-group img:nth-child(1) { max-width: 130px; }
-.footer-logo-group img:nth-child(2) { max-width: 210px; }
-.footer-logo-group img:nth-child(3) { max-width: 130px; }
-
-@media (max-width: 640px) {
-  .footer-logo-group { gap: 18px; }
-  .footer-logo-group img { max-width: 120px; }
+/* 4) Ajustes individuales (SIN escalas exageradas) */
+.footer-logo--brand{
+  --s: 1.20;   /* antes 2.00 (rompía el balance) */
+  --y: 2px;
+  --x: 0px;
+  max-width: 190px; /* controla horizontales sin deformar */
 }
+
+.footer-logo--rtt{
+  --s: 1.05;
+  --y: 1px;
+  --x: 0px;
+  max-width: 240px;
+}
+
+.footer-logo--iha{
+  --s: 1.00;
+  --y: 0px;
+  --x: 0px;
+  max-width: 165px;
+}
+
+/* 5) Responsive */
+@media (max-width: 640px){
+  .footer-legal{
+    max-width: 100%;
+  }
+
+  .footer-logo-group{
+    --logos-gap: 18px;
+    --logos-max-h: 46px;
+    padding: 8px 0 2px;
+    margin-bottom: 12px;
+  }
+
+  .footer-logo--brand{ max-width: 160px; }
+  .footer-logo--rtt{   max-width: 200px; }
+  .footer-logo--iha{   max-width: 140px; }
+}
+
 
 .footer-main {
   display: grid;
@@ -805,6 +841,7 @@ img {
   max-width: 1100px;
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.45;
+  font-size: 15px;
 }
 
 .legal-links {
@@ -827,6 +864,13 @@ img {
   text-align: center;
   color: rgba(229, 231, 235, 0.75);
 }
+
+.site-footer {
+  background: var(--color-footer-bg);
+  width: 100%;
+  padding: 25px;
+}
+
 
 
 /* =====================================================
@@ -1811,9 +1855,6 @@ img {
 }
 
 
-@media (max-width: 900px){
-  .main-nav{ ... }
-}
 
 /* =====================================================
    PATCH MOBILE (SIN ROMPER): LOGO | WHATSAPP (CENTRO) | HAMBURGUESA (DERECHA)
@@ -2108,3 +2149,328 @@ img {
   max-height: 500px;
   object-position: center 35%; /* 🔑 baja la imagen */
 }
+
+/* =====================================================
+   RTT – TEXTO SE ADAPTA A LA ALTURA DE LA IMAGEN
+   (La imagen manda. El texto no se pasa.)
+   ===================================================== */
+
+/* 1) Sin zig-zag SOLO en esta página */
+#subconsciente.section:nth-of-type(even) .two-cols > div:first-child,
+#subconsciente.section:nth-of-type(even) .two-cols > div:last-child,
+#que-es-la-terapia-rtt.section:nth-of-type(even) .two-cols > div:first-child,
+#que-es-la-terapia-rtt.section:nth-of-type(even) .two-cols > div:last-child,
+#como-funciona-rtt.section:nth-of-type(even) .two-cols > div:first-child,
+#como-funciona-rtt.section:nth-of-type(even) .two-cols > div:last-child{
+  order: initial;
+}
+
+/* 2) 2 columnas normales, alineadas arriba (más control) */
+#subconsciente .two-cols,
+#que-es-la-terapia-rtt .two-cols,
+#como-funciona-rtt .two-cols{
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: start;   /* 🔑 texto y foto arrancan arriba */
+  gap: 40px;
+}
+
+/* 3) Definimos una "altura objetivo" que representa la altura visual de la imagen.
+      El texto NO puede pasar de esa altura. */
+#subconsciente,
+#que-es-la-terapia-rtt,
+#como-funciona-rtt{
+  --rtt-media-h: 360px; /* 👈 AJUSTA ESTE NÚMERO (300–380 suele quedar perfecto) */
+}
+
+/* 4) Imagen: la dejamos como está (manda), pero fijamos altura consistente */
+#subconsciente .hero-side img,
+#que-es-la-terapia-rtt .hero-side img,
+#como-funciona-rtt .hero-side img{
+  width: 100%;
+  height: var(--rtt-media-h);  /* 🔑 esta es la referencia */
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+}
+
+/* 5) Texto: se limita a la misma altura que la imagen */
+#subconsciente .two-cols > div:first-child,
+#que-es-la-terapia-rtt .two-cols > div:first-child,
+#como-funciona-rtt .two-cols > div:first-child{
+  max-height: var(--rtt-media-h); /* 🔑 texto no sobrepasa a la imagen */
+  overflow: hidden;              /* corta el exceso si hay mucho texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* centra el texto dentro de la altura */
+}
+
+/* 6) Tipografía: un poco más grande pero compacta para que entre mejor */
+#subconsciente h1,
+#que-es-la-terapia-rtt h1,
+#como-funciona-rtt h2{
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+#subconsciente p,
+#que-es-la-terapia-rtt p,
+#como-funciona-rtt p{
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 10px;
+  max-width: 60ch;
+}
+
+/* 7) Responsive: en móvil vuelve normal (no cortamos texto en 1 columna) */
+@media (max-width: 980px){
+  #subconsciente .two-cols > div:first-child,
+  #que-es-la-terapia-rtt .two-cols > div:first-child,
+  #como-funciona-rtt .two-cols > div:first-child{
+    max-height: none;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  #subconsciente .hero-side img,
+  #que-es-la-terapia-rtt .hero-side img,
+  #como-funciona-rtt .hero-side img{
+    height: auto;
+  }
+}
+
+/* =====================================================
+   IMÁGENES RECORTADAS (MISMO CORTE EN TODO EL SITIO)
+   - misma altura
+   - mismo borde
+   - mismo estilo visual
+   ===================================================== */
+
+.rtt-crop{
+  width: 100%;
+  height: 520px;          /* 👈 mismo “corte” que las otras */
+  object-fit: cover;      /* recorta sin deformar */
+  object-position: center;/* foco al centro */
+  border-radius: 22px;
+  display: block;
+}
+
+/* =====================================================
+   PATCH CONTACTO – 2 columnas hasta tablet
+   (no afecta móvil)
+   ===================================================== */
+
+/* Forzamos 2 columnas en pantallas medianas/grandes */
+.contact-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Si tu media query global (980px) lo pasa a 1 col, lo “pisamos” */
+@media (max-width: 980px){
+  .contact-layout{
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* Solo en celular (ya de verdad) se vuelve 1 columna */
+@media (max-width: 720px){
+  .contact-layout{
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info h1{
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p{
+  max-width: 62ch;
+}
+
+.contact-card{
+  max-width: 680px;
+}
+
+.contact-info .btn-primary{
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* =====================================================
+   FIXES RESPONSIVE (NO BORRA NADA)
+   1) Header background no se corta en ciertos anchos
+   2) RTT / two-cols: en móvil SIEMPRE 1 columna (como tu 1ra foto)
+   ===================================================== */
+
+/* ---------- 1) HEADER: evita “cortes” del PNG en ciertos tamaños ---------- */
+@media (max-width: 1100px){
+  .site-header{
+    /* quita el offset que causa cortes */
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+
+/* (opcional) en pantallas muy pequeñas, a veces cover se ve mejor así */
+@media (max-width: 520px){
+  .site-header{
+    background-position: center top !important;
+  }
+}
+
+
+/* ---------- 2) RTT: NO permitir 2 columnas en móvil ---------- */
+/* Esto arregla exactamente lo de tu screenshot 2 (texto a la izq + imagen chiquita a la der) */
+@media (max-width: 980px){
+
+  #subconsciente .two-cols,
+  #que-es-la-terapia-rtt .two-cols,
+  #como-funciona-rtt .two-cols{
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  #subconsciente .hero-side,
+  #que-es-la-terapia-rtt .hero-side,
+  #como-funciona-rtt .hero-side{
+    order: 2;
+  }
+
+  #subconsciente .hero-side img,
+  #que-es-la-terapia-rtt .hero-side img,
+  #como-funciona-rtt .hero-side img{
+    width: 100% !important;
+    height: auto !important;
+    max-width: 520px;
+    margin: 16px auto 0;
+    border-radius: 22px;
+  }
+}
+
+/* Extra: “breakpoint intermedio” (tablets) por si ves el split en anchos raros */
+@media (max-width: 860px){
+
+  #subconsciente .two-cols,
+  #que-es-la-terapia-rtt .two-cols,
+  #como-funciona-rtt .two-cols{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* =========================
+   BENEFICIOS CON CHULITO
+   ========================= */
+
+.benefits-block{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.benefit-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.benefit-check{
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.benefit-item strong{
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.benefit-item p{
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   FIX LISTAS RTT EN MÓVIL
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* contenedor general de casos */
+  #casos-rtt .cases-grid-3,
+  #faq .cases-grid-3 {
+    display: block !important;
+  }
+
+  /* cada columna se vuelve una sola lista */
+  #casos-rtt .cases-col,
+  #faq .cases-col {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  /* bullets más limpios en móvil */
+  #casos-rtt .cases-col li,
+  #faq .cases-col li {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+}
+
+/* =====================================================
+   SOBRE MÍ - FOTO (ESPACIO + REDONDEADO + ALTURA EN MÓVIL)
+   ===================================================== */
+
+.about-hero .two-cols{
+  align-items: center;
+  gap: 28px; /* espacio entre texto y foto en desktop */
+}
+
+.about-photo{
+  display: flex;
+  justify-content: center;
+}
+
+.about-img{
+  width: min(420px, 100%);
+  height: 520px;           /* altura controlada en desktop */
+  object-fit: cover;       /* mantiene proporción y recorta bonito */
+  border-radius: 22px;     /* estilo redondeado como el resto */
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+/* MÓVIL */
+@media (max-width: 768px){
+  .about-hero .two-cols{
+    display: flex;         /* por si tu two-cols era grid */
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /* espacio arriba y abajo SOLO en móvil */
+  .about-photo{
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  .about-img{
+    height: 360px;         /* altura ideal en móvil */
+    border-radius: 20px;
+  }
+}
+
